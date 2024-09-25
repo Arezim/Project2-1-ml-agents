@@ -47,6 +47,8 @@ public class SoccerEnvController : MonoBehaviour
 
     private int m_ResetTimer;
 
+    private Dictionary<Team, int> teamScores = new Dictionary<Team, int>();
+
     void Start()
     {
 
@@ -100,11 +102,13 @@ public class SoccerEnvController : MonoBehaviour
     {
         if (scoredTeam == Team.Blue)
         {
+            teamScores[Team.Blue] += 1;
             m_BlueAgentGroup.AddGroupReward(1 - (float)m_ResetTimer / MaxEnvironmentSteps);
             m_PurpleAgentGroup.AddGroupReward(-1);
         }
         else
         {
+            teamScores[Team.Purple] += 1;
             m_PurpleAgentGroup.AddGroupReward(1 - (float)m_ResetTimer / MaxEnvironmentSteps);
             m_BlueAgentGroup.AddGroupReward(-1);
         }
@@ -112,6 +116,11 @@ public class SoccerEnvController : MonoBehaviour
         m_BlueAgentGroup.EndGroupEpisode();
         ResetScene();
 
+    }
+
+    public void clearScores()
+    {
+        this.teamScores = new Dictionary<Team, int>();
     }
 
 
