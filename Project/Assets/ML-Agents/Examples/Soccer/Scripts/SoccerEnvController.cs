@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.MLAgents;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoccerEnvController : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class SoccerEnvController : MonoBehaviour
     public List<PlayerInfo> AgentsList = new List<PlayerInfo>();
 
     private SoccerSettings m_SoccerSettings;
+    
 
 
     private SimpleMultiAgentGroup m_BlueAgentGroup;
@@ -48,6 +50,9 @@ public class SoccerEnvController : MonoBehaviour
     private int m_ResetTimer;
 
     private Dictionary<Team, int> teamScores = new Dictionary<Team, int>();
+
+    public Text WinLabel;
+    public Button RestartButton;
 
     void Start()
     {
@@ -59,6 +64,9 @@ public class SoccerEnvController : MonoBehaviour
         m_PurpleAgentGroup = new SimpleMultiAgentGroup();
         ballRb = ball.GetComponent<Rigidbody>();
         m_BallStartingPos = new Vector3(ball.transform.position.x, ball.transform.position.y, ball.transform.position.z);
+        WinLabel.gameObject.SetActive(true);  
+        RestartButton.gameObject.SetActive(true);
+        RestartButton.onClick.AddListener(RestartGame);
         foreach (var item in AgentsList)
         {
             item.StartingPos = item.Agent.transform.position;
@@ -106,12 +114,14 @@ public class SoccerEnvController : MonoBehaviour
             teamScores[Team.Blue] += 1;
             m_BlueAgentGroup.AddGroupReward(1 - (float)m_ResetTimer / MaxEnvironmentSteps);
             m_PurpleAgentGroup.AddGroupReward(-1);
+            ShowWinner("TEAM BLUE WON");
         }
         else
         {
             teamScores[Team.Purple] += 1;
             m_PurpleAgentGroup.AddGroupReward(1 - (float)m_ResetTimer / MaxEnvironmentSteps);
             m_BlueAgentGroup.AddGroupReward(-1);
+            ShowWinner("TEAM PURPLE WON");
         }
 
 
@@ -166,6 +176,8 @@ public class SoccerEnvController : MonoBehaviour
             item.Rb.velocity = Vector3.zero;
             item.Rb.angularVelocity = Vector3.zero;
         }
+        WinLabel.gameObject.SetActive(false);  
+        RestartButton.gameObject.SetActive(false); 
 
         //Reset Ball
         ResetBall();
@@ -196,5 +208,18 @@ public class SoccerEnvController : MonoBehaviour
             print("movement state:" + item.Agent.movementEnabled);
         }
     }
+
+     public void ShowWinner(string winnerText)
+    {
+        WinLabel.text = winnerText;    
+        WinLabel.gameObject.SetActive(true);  
+        RestartButton.gameObject.SetActive(true); 
+    }
+
+   public void RestartGame()
+{
+    clearScores();
+    ResetScene();
+} 
 
 }
