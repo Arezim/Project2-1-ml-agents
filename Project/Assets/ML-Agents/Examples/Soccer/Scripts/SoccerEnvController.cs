@@ -51,6 +51,7 @@ public class SoccerEnvController : MonoBehaviour
 
     void Start()
     {
+		this.clearScores();
 
         m_SoccerSettings = FindObjectOfType<SoccerSettings>();
         // Initialize TeamManager
@@ -103,12 +104,14 @@ public class SoccerEnvController : MonoBehaviour
         if (scoredTeam == Team.Blue)
         {
             teamScores[Team.Blue] += 1;
+			Debug.Log("Blue scored! Current Score: " + teamScores[Team.Blue]);
             m_BlueAgentGroup.AddGroupReward(1 - (float)m_ResetTimer / MaxEnvironmentSteps);
             m_PurpleAgentGroup.AddGroupReward(-1);
         }
         else
         {
             teamScores[Team.Purple] += 1;
+			Debug.Log("Purple scored! Current Score: " + teamScores[Team.Purple]);
             m_PurpleAgentGroup.AddGroupReward(1 - (float)m_ResetTimer / MaxEnvironmentSteps);
             m_BlueAgentGroup.AddGroupReward(-1);
         }
@@ -121,6 +124,8 @@ public class SoccerEnvController : MonoBehaviour
     public void clearScores()
     {
         this.teamScores = new Dictionary<Team, int>();
+		this.teamScores[Team.Blue] = 0;
+		this.teamScores[Team.Purple] = 0;
     }
 
 
