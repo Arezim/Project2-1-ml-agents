@@ -104,17 +104,38 @@ public class SoccerEnvController : MonoBehaviour
         if (scoredTeam == Team.Blue)
         {
             teamScores[Team.Blue] += 1;
-			Debug.Log("Blue scored! Current Score: " + teamScores[Team.Blue]);
             m_BlueAgentGroup.AddGroupReward(1 - (float)m_ResetTimer / MaxEnvironmentSteps);
             m_PurpleAgentGroup.AddGroupReward(-1);
         }
         else
         {
             teamScores[Team.Purple] += 1;
-			Debug.Log("Purple scored! Current Score: " + teamScores[Team.Purple]);
             m_PurpleAgentGroup.AddGroupReward(1 - (float)m_ResetTimer / MaxEnvironmentSteps);
             m_BlueAgentGroup.AddGroupReward(-1);
         }
+
+
+
+
+
+
+        if (this.teamScores[Team.Blue] >=1 || this.teamScores[Team.Purple] >=1)
+        {
+            print("Blue Goals: " + this.teamScores[Team.Blue] + " Purple Goals: " + this.teamScores[Team.Purple]);
+            print("Game finished!");
+            m_BlueAgentGroup.EndGroupEpisode();
+            m_PurpleAgentGroup.EndGroupEpisode();
+            StopScene();
+            return;
+        }
+
+
+
+
+
+
+
+
         m_PurpleAgentGroup.EndGroupEpisode();
         m_BlueAgentGroup.EndGroupEpisode();
         ResetScene();
@@ -149,4 +170,31 @@ public class SoccerEnvController : MonoBehaviour
         //Reset Ball
         ResetBall();
     }
+
+    public void StopScene()
+    {
+        // Reset ball
+        ballRb.velocity = Vector3.zero;
+        ballRb.angularVelocity = Vector3.zero;
+
+        // Stop agents
+        m_PurpleAgentGroup.GroupEpisodeInterrupted();
+        m_BlueAgentGroup.GroupEpisodeInterrupted();
+
+        foreach (var item in AgentsList)
+        {
+            // Stop agent physics
+            var newStartPos = item.Agent.initialPos;
+            var rot = item.Agent.rotSign;
+            var newRot = Quaternion.Euler(0, rot, 0);
+            item.Agent.transform.SetPositionAndRotation(newStartPos, newRot);
+            item.Agent.agentRb.velocity = Vector3.zero;
+            item.Agent.agentRb.angularVelocity = Vector3.zero;
+
+            // Disable agent movement
+            item.Agent.movementEnabled = false;
+            print("movement state:" + item.Agent.movementEnabled);
+        }
+    }
+
 }
