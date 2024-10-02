@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using Unity.MLAgents;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+
 
 public class SoccerEnvController : MonoBehaviour
 {
@@ -98,8 +100,8 @@ public class SoccerEnvController : MonoBehaviour
 
     public void ResetBall()
     {
-        var randomPosX = Random.Range(-2.5f, 2.5f);
-        var randomPosZ = Random.Range(-2.5f, 2.5f);
+        var randomPosX = UnityEngine.Random.Range(-2.5f, 2.5f);
+        var randomPosZ = UnityEngine.Random.Range(-2.5f, 2.5f);
 
         ball.transform.position = m_BallStartingPos + new Vector3(randomPosX, 0f, randomPosZ);
         ballRb.velocity = Vector3.zero;
@@ -167,9 +169,9 @@ public class SoccerEnvController : MonoBehaviour
         //Reset Agents
         foreach (var item in AgentsList)
         {
-            var randomPosX = Random.Range(-5f, 5f);
+            var randomPosX = UnityEngine.Random.Range(-5f, 5f);
             var newStartPos = item.Agent.initialPos + new Vector3(randomPosX, 0f, 0f);
-            var rot = item.Agent.rotSign * Random.Range(80.0f, 100.0f);
+            var rot = item.Agent.rotSign * UnityEngine.Random.Range(80.0f, 100.0f);
             var newRot = Quaternion.Euler(0, rot, 0);
             item.Agent.transform.SetPositionAndRotation(newStartPos, newRot);
 
@@ -211,15 +213,30 @@ public class SoccerEnvController : MonoBehaviour
 
      public void ShowWinner(string winnerText)
     {
-        WinLabel.text = winnerText;    
-        WinLabel.gameObject.SetActive(true);  
-        RestartButton.gameObject.SetActive(true); 
+       try
+       {
+        WinLabel.text = winnerText;
+        WinLabel.gameObject.SetActive(true);
+        RestartButton.gameObject.SetActive(true);
+       }
+       catch (NullReferenceException ex)
+       {
+        Debug.LogError("A NullReferenceException occurred: " + ex.Message);
+        
+       }
     }
 
    public void RestartGame()
 {
     clearScores();
     ResetScene();
+    foreach (var item in AgentsList)
+        {
+            
+            // Disable agent movement
+            item.Agent.movementEnabled = true;
+            print("movement state:" + item.Agent.movementEnabled);
+        }
 } 
 
 }
