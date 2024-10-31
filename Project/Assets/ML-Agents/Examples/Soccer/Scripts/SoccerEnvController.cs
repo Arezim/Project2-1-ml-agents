@@ -131,7 +131,7 @@ public class SoccerEnvController : MonoBehaviour
 
 
 
-        if (this.teamScores[Team.Blue] >=1 || this.teamScores[Team.Purple] >=1)
+        if (this.teamScores[Team.Blue] >=5 || this.teamScores[Team.Purple] >=5)
         {
             print("Blue Goals: " + this.teamScores[Team.Blue] + " Purple Goals: " + this.teamScores[Team.Purple]);
             print("Game finished!");
