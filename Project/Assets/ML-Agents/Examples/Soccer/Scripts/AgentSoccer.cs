@@ -144,6 +144,8 @@ public class AgentSoccer : Agent
             transform.Rotate(rotateDir, Time.deltaTime * 100f);
             agentRb.AddForce(dirToGo * m_SoccerSettings.agentRunSpeed,
                 ForceMode.VelocityChange);
+
+            SoundManager.PlaySound(new Sound(transform.position, 15));
         }
     }
 

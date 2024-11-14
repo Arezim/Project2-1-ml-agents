@@ -1,19 +1,60 @@
+using System;
+using System.Collections.Generic;
 using Unity.MLAgents.Sensors;
+using UnityEngine;
 
-public class SoundSensorComponent : SensorComponent, ISoundListener
+public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 {
+    private List<Sound> sounds = new List<Sound>();
+
+    private readonly int maxObservations = 10; 
+
     public override ISensor[] CreateSensors()
     {
-        throw new System.NotImplementedException();
+        return new ISensor[] { this };
     }
 
-    public void OnHearSound(Sound soun)
+    public byte[] GetCompressedObservation()
     {
-        throw new System.NotImplementedException();
+        return new byte[0];
     }
-}
 
-public interface SoundSensor : ISensor
-{
-    
+    public CompressionSpec GetCompressionSpec()
+    {
+        return CompressionSpec.Default();
+    }
+
+    public string GetName()
+    {
+        return gameObject.name;
+    }
+
+    public ObservationSpec GetObservationSpec()
+    {
+        return ObservationSpec.VariableLength(3, maxObservations);
+    }
+
+    public void Reset()
+    {
+        sounds.Clear();
+    }
+
+    public void Update()
+    {
+
+    }
+
+    public int Write(ObservationWriter writer)
+    {
+        foreach (var sound in sounds)
+        {
+            writer.Add(sound.Origin);
+        }
+        return sounds.Count;
+    }
+
+    public void OnHearSound(Sound sound)
+    {
+        sounds.Add(sound);
+    }
 }
