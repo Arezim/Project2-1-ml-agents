@@ -118,11 +118,6 @@ public class SoccerEnvController : MonoBehaviour
             m_BlueAgentGroup.AddGroupReward(-1);
         }
 
-
-
-
-
-
         if (this.teamScores[Team.Blue] >=1 || this.teamScores[Team.Purple] >=1)
         {
             print("Blue Goals: " + this.teamScores[Team.Blue] + " Purple Goals: " + this.teamScores[Team.Purple]);
@@ -132,13 +127,6 @@ public class SoccerEnvController : MonoBehaviour
             StopScene();
             return;
         }
-
-
-
-
-
-
-
 
         m_PurpleAgentGroup.EndGroupEpisode();
         m_BlueAgentGroup.EndGroupEpisode();
