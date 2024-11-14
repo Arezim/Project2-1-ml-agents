@@ -2277,6 +2277,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
+  movementEnabled: 1
   team: 0
   position: 2
   agentRb: {fileID: 0}
@@ -2443,6 +2444,8 @@ GameObject:
   - component: {fileID: 114516244030127556}
   - component: {fileID: 404683423509059512}
   - component: {fileID: 8557426429796011212}
+  - component: {fileID: 7062801962916793063}
+  - component: {fileID: 9089679571578436041}
   m_Layer: 0
   m_Name: BlueStriker
   m_TagString: blueAgent
@@ -2562,6 +2565,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
+  movementEnabled: 1
   team: 1
   position: 2
   agentRb: {fileID: 0}
@@ -2629,6 +2633,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugCommandLineOverride: 
+--- !u!135 &7062801962916793063
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131626411948014}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9089679571578436041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131626411948014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72dddad082c8c744eaf32fb9873fc60b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1141134673700168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2700,6 +2737,8 @@ MonoBehaviour:
     StartingPos: {x: 0, y: 0, z: 0}
     StartingRot: {x: 0, y: 0, z: 0, w: 0}
     Rb: {fileID: 0}
+  WinLabel: {fileID: 0}
+  RestartButton: {fileID: 0}
 --- !u!1 &1366507812774098
 GameObject:
   m_ObjectHideFlags: 0
@@ -4469,6 +4508,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
+  movementEnabled: 1
   team: 0
   position: 2
   agentRb: {fileID: 0}
@@ -5008,6 +5048,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
+  movementEnabled: 1
   team: 1
   position: 2
   agentRb: {fileID: 0}
