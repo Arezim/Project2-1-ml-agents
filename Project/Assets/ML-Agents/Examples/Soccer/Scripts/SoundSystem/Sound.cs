@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public struct Sound
 {
     public Vector3 Origin;

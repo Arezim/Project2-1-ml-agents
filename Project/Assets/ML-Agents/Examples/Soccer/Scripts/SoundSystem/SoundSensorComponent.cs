@@ -1,3 +1,5 @@
+using Unity.MLAgents.Sensors;
+
 public class SoundSensorComponent : SensorComponent
 {
 
