@@ -1,0 +1,20 @@
+To train the ml agents you need to
+- Install a bunch of python packages and setup a virtual environment https://unity-technologies.github.io/ml-agents/Installation/
+- Before doing anything, run 
+	- conda activate mlagents
+	- cd C:\Users\tymek\Project2-1-ml-agents
+	- mlagents-learn --help
+- To start the training, run (mlagents-learn config/custom/SoccerTwos.yaml --run-id=ty_training_1)
+	- Where the first parameter is the training config file, and the second is a unique training identifier
+	- For more info on training, see https://unity-technologies.github.io/ml-agents/Getting-Started/#training-a-new-model-with-reinforcement-learning
+	
+	
+	
+------------------------------------------------------------------------
+To do:
+- Fix 
+C:\Users\tymek\miniconda3\envs\mlagents\lib\site-packages\mlagents\trainers\torch_entities\utils.py:289: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matrices or `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\TensorShape.cpp:3687.)
+  torch.nn.functional.one_hot(_act.T, action_size[i]).float()
+
+- Make sure the thing that stops the agents isn't there anymore
+- Delete the useless debug logs
