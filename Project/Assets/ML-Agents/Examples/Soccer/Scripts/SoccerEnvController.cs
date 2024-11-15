@@ -1,8 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Unity.MLAgents;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
 
 public class SoccerEnvController : MonoBehaviour
@@ -40,10 +40,10 @@ public class SoccerEnvController : MonoBehaviour
     Vector3 m_BallStartingPos;
 
     //List of Agents On Platform
-    public List<PlayerInfo> AgentsList = new List<PlayerInfo>();
+    public List<PlayerInfo> AgentsList = new();
 
     private SoccerSettings m_SoccerSettings;
-    
+
 
 
     private SimpleMultiAgentGroup m_BlueAgentGroup;
@@ -51,11 +51,11 @@ public class SoccerEnvController : MonoBehaviour
 
     private int m_ResetTimer;
 
-    private Dictionary<Team, int> teamScores = new Dictionary<Team, int>();
+    private Dictionary<Team, int> teamScores = new();
 
     void Start()
     {
-		this.clearScores();
+        this.clearScores();
 
         m_SoccerSettings = FindObjectOfType<SoccerSettings>();
         // Initialize TeamManager
@@ -63,7 +63,7 @@ public class SoccerEnvController : MonoBehaviour
         m_PurpleAgentGroup = new SimpleMultiAgentGroup();
         ballRb = ball.GetComponent<Rigidbody>();
         m_BallStartingPos = new Vector3(ball.transform.position.x, ball.transform.position.y, ball.transform.position.z);
-        foreach (var item in AgentsList)
+        foreach (PlayerInfo item in AgentsList)
         {
             item.StartingPos = item.Agent.transform.position;
             item.StartingRot = item.Agent.transform.rotation;
@@ -94,8 +94,8 @@ public class SoccerEnvController : MonoBehaviour
 
     public void ResetBall()
     {
-        var randomPosX = UnityEngine.Random.Range(-2.5f, 2.5f);
-        var randomPosZ = UnityEngine.Random.Range(-2.5f, 2.5f);
+        float randomPosX = UnityEngine.Random.Range(-2.5f, 2.5f);
+        float randomPosZ = UnityEngine.Random.Range(-2.5f, 2.5f);
 
         ball.transform.position = m_BallStartingPos + new Vector3(randomPosX, 0f, randomPosZ);
         ballRb.velocity = Vector3.zero;
@@ -118,7 +118,7 @@ public class SoccerEnvController : MonoBehaviour
             m_BlueAgentGroup.AddGroupReward(-1);
         }
 
-        if (this.teamScores[Team.Blue] >=1 || this.teamScores[Team.Purple] >=1)
+        /*if (this.teamScores[Team.Blue] >=1 || this.teamScores[Team.Purple] >=1)
         {
             print("Blue Goals: " + this.teamScores[Team.Blue] + " Purple Goals: " + this.teamScores[Team.Purple]);
             print("Game finished!");
@@ -126,7 +126,7 @@ public class SoccerEnvController : MonoBehaviour
             m_PurpleAgentGroup.EndGroupEpisode();
             StopScene();
             return;
-        }
+        }*/
 
         m_PurpleAgentGroup.EndGroupEpisode();
         m_BlueAgentGroup.EndGroupEpisode();
@@ -137,8 +137,8 @@ public class SoccerEnvController : MonoBehaviour
     public void clearScores()
     {
         this.teamScores = new Dictionary<Team, int>();
-		this.teamScores[Team.Blue] = 0;
-		this.teamScores[Team.Purple] = 0;
+        this.teamScores[Team.Blue] = 0;
+        this.teamScores[Team.Purple] = 0;
     }
 
 
@@ -147,12 +147,12 @@ public class SoccerEnvController : MonoBehaviour
         m_ResetTimer = 0;
 
         //Reset Agents
-        foreach (var item in AgentsList)
+        foreach (PlayerInfo item in AgentsList)
         {
-            var randomPosX = UnityEngine.Random.Range(-5f, 5f);
-            var newStartPos = item.Agent.initialPos + new Vector3(randomPosX, 0f, 0f);
-            var rot = item.Agent.rotSign * UnityEngine.Random.Range(80.0f, 100.0f);
-            var newRot = Quaternion.Euler(0, rot, 0);
+            float randomPosX = UnityEngine.Random.Range(-5f, 5f);
+            Vector3 newStartPos = item.Agent.initialPos + new Vector3(randomPosX, 0f, 0f);
+            float rot = item.Agent.rotSign * UnityEngine.Random.Range(80.0f, 100.0f);
+            Quaternion newRot = Quaternion.Euler(0, rot, 0);
             item.Agent.transform.SetPositionAndRotation(newStartPos, newRot);
 
             item.Rb.velocity = Vector3.zero;
@@ -173,12 +173,12 @@ public class SoccerEnvController : MonoBehaviour
         m_PurpleAgentGroup.GroupEpisodeInterrupted();
         m_BlueAgentGroup.GroupEpisodeInterrupted();
 
-        foreach (var item in AgentsList)
+        foreach (PlayerInfo item in AgentsList)
         {
             // Stop agent physics
-            var newStartPos = item.Agent.initialPos;
-            var rot = item.Agent.rotSign;
-            var newRot = Quaternion.Euler(0, rot, 0);
+            Vector3 newStartPos = item.Agent.initialPos;
+            float rot = item.Agent.rotSign;
+            Quaternion newRot = Quaternion.Euler(0, rot, 0);
             item.Agent.transform.SetPositionAndRotation(newStartPos, newRot);
             item.Agent.agentRb.velocity = Vector3.zero;
             item.Agent.agentRb.angularVelocity = Vector3.zero;
@@ -189,17 +189,17 @@ public class SoccerEnvController : MonoBehaviour
         }
     }
 
-   public void RestartGame()
-{
-    clearScores();
-    ResetScene();
-    foreach (var item in AgentsList)
+    public void RestartGame()
+    {
+        clearScores();
+        ResetScene();
+        foreach (PlayerInfo item in AgentsList)
         {
-            
+
             // Disable agent movement
             item.Agent.movementEnabled = true;
             print("movement state:" + item.Agent.movementEnabled);
         }
-} 
+    }
 
 }
