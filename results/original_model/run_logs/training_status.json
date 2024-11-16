@@ -1,0 +1,66 @@
+{
+    "SoccerTwos": {
+        "elo": 1466.9372873381487,
+        "checkpoints": [
+            {
+                "steps": 499478,
+                "file_path": "results\\ty_training_original\\SoccerTwos\\SoccerTwos-499478.onnx",
+                "reward": 0.0,
+                "creation_time": 1731693159.7972527,
+                "auxillary_file_paths": [
+                    "results\\ty_training_original\\SoccerTwos\\SoccerTwos-499478.pt"
+                ]
+            },
+            {
+                "steps": 999946,
+                "file_path": "results\\ty_training_original\\SoccerTwos\\SoccerTwos-999946.onnx",
+                "reward": 0.0,
+                "creation_time": 1731694802.633899,
+                "auxillary_file_paths": [
+                    "results\\ty_training_original\\SoccerTwos\\SoccerTwos-999946.pt"
+                ]
+            },
+            {
+                "steps": 1499984,
+                "file_path": "results\\ty_training_original\\SoccerTwos\\SoccerTwos-1499984.onnx",
+                "reward": 0.0,
+                "creation_time": 1731696461.565053,
+                "auxillary_file_paths": [
+                    "results\\ty_training_original\\SoccerTwos\\SoccerTwos-1499984.pt"
+                ]
+            },
+            {
+                "steps": 1999974,
+                "file_path": "results\\ty_training_original\\SoccerTwos\\SoccerTwos-1999974.onnx",
+                "reward": 0.0,
+                "creation_time": 1731698187.6069698,
+                "auxillary_file_paths": [
+                    "results\\ty_training_original\\SoccerTwos\\SoccerTwos-1999974.pt"
+                ]
+            },
+            {
+                "steps": 2282238,
+                "file_path": "results\\ty_training_original\\SoccerTwos\\SoccerTwos-2282238.onnx",
+                "reward": null,
+                "creation_time": 1731699150.1228044,
+                "auxillary_file_paths": [
+                    "results\\ty_training_original\\SoccerTwos\\SoccerTwos-2282238.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2282238,
+            "file_path": "results\\ty_training_original\\SoccerTwos.onnx",
+            "reward": null,
+            "creation_time": 1731699150.1228044,
+            "auxillary_file_paths": [
+                "results\\ty_training_original\\SoccerTwos\\SoccerTwos-2282238.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.0.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}
