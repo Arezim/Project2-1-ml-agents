@@ -1,8 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Unity.MLAgents;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
 
 public class SoccerEnvController : MonoBehaviour
@@ -43,7 +43,7 @@ public class SoccerEnvController : MonoBehaviour
     public List<PlayerInfo> AgentsList = new List<PlayerInfo>();
 
     private SoccerSettings m_SoccerSettings;
-    
+
 
 
     private SimpleMultiAgentGroup m_BlueAgentGroup;
@@ -55,7 +55,7 @@ public class SoccerEnvController : MonoBehaviour
 
     void Start()
     {
-		this.clearScores();
+        this.clearScores();
 
         m_SoccerSettings = FindObjectOfType<SoccerSettings>();
         // Initialize TeamManager
@@ -118,7 +118,7 @@ public class SoccerEnvController : MonoBehaviour
             m_BlueAgentGroup.AddGroupReward(-1);
         }
 
-        if (this.teamScores[Team.Blue] >=1 || this.teamScores[Team.Purple] >=1)
+        /*if (this.teamScores[Team.Blue] >=1 || this.teamScores[Team.Purple] >=1)
         {
             print("Blue Goals: " + this.teamScores[Team.Blue] + " Purple Goals: " + this.teamScores[Team.Purple]);
             print("Game finished!");
@@ -126,7 +126,7 @@ public class SoccerEnvController : MonoBehaviour
             m_PurpleAgentGroup.EndGroupEpisode();
             StopScene();
             return;
-        }
+        }*/
 
         m_PurpleAgentGroup.EndGroupEpisode();
         m_BlueAgentGroup.EndGroupEpisode();
@@ -137,8 +137,8 @@ public class SoccerEnvController : MonoBehaviour
     public void clearScores()
     {
         this.teamScores = new Dictionary<Team, int>();
-		this.teamScores[Team.Blue] = 0;
-		this.teamScores[Team.Purple] = 0;
+        this.teamScores[Team.Blue] = 0;
+        this.teamScores[Team.Purple] = 0;
     }
 
 
@@ -189,17 +189,17 @@ public class SoccerEnvController : MonoBehaviour
         }
     }
 
-   public void RestartGame()
-{
-    clearScores();
-    ResetScene();
-    foreach (var item in AgentsList)
+    public void RestartGame()
+    {
+        clearScores();
+        ResetScene();
+        foreach (var item in AgentsList)
         {
-            
+
             // Disable agent movement
             item.Agent.movementEnabled = true;
             print("movement state:" + item.Agent.movementEnabled);
         }
-} 
+    }
 
 }
