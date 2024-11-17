@@ -34,7 +34,7 @@ public class SoccerBallController : MonoBehaviour
     {
         if (ball.velocity.magnitude > 0.1f) 
         {
-            SoundManager.PlaySound(new Sound(transform.position, 10f));
+            SoundManager.PlaySound(new Sound(transform.position,15f, 10)); // Add higher priority
         }
     }
 }
