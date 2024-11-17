@@ -51,6 +51,11 @@ public class AgentSoccer : Agent
 
     EnvironmentParameters m_ResetParams;
 
+    public Transform ball; // Reference to the ball
+    public Transform goal; // Reference to the team's goal
+    public Transform blueGoal; // Reference to the blue team's goal
+    public Transform purpleGoal; // Reference to the purple team's goal
+
     public override void Initialize()
     {
         SoccerEnvController envController = GetComponentInParent<SoccerEnvController>();
@@ -69,12 +74,14 @@ public class AgentSoccer : Agent
             team = Team.Blue;
             initialPos = new Vector3(transform.position.x - 5f, .5f, transform.position.z);
             rotSign = 1f;
+            goal = purpleGoal; 
         }
         else
         {
             team = Team.Purple;
             initialPos = new Vector3(transform.position.x + 5f, .5f, transform.position.z);
             rotSign = -1f;
+            goal = blueGoal; 
         }
         if (position == Position.Goalie)
         {
@@ -311,8 +318,39 @@ public class AgentSoccer : Agent
         AddReward(0.1f * soundIntensity); 
     }
 
-   
+//checks the position of the agent and calls the appropriate movement method based on the agent's role
+    void Update()
+    {
+        if (position == Position.Striker)
+        {
+            MoveStrikerTowardsGoal();
+        }
+        else if (position == Position.Goalie)
+        {
+            MoveGoalieTowardsGoal();
+        }
+    }
 
+    void MoveStrikerTowardsGoal()
+    {
+        Vector3 directionToGoal = (goal.position - transform.position).normalized;
+        float speed = 5.0f; 
+        transform.position += directionToGoal * speed * Time.deltaTime;
+    }
 
+    void MoveGoalieTowardsGoal()
+    {
+        float distanceToBall = Vector3.Distance(transform.position, ball.position);
 
+        
+        float thresholdDistance = 10.0f;
+
+        if (distanceToBall < thresholdDistance)
+        {
+            
+            Vector3 directionToGoal = (goal.position - transform.position).normalized;
+            float speed = 5.0f; 
+            transform.position += directionToGoal * speed * Time.deltaTime;
+        }
+    }
 }
