@@ -1,4 +1,4 @@
 public interface ISoundListener
 {
-    public void OnHearSound(Sound soun);
+    public void OnHearSound(Sound sound);
 }

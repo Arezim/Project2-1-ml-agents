@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
     private List<Sound> sounds = new List<Sound>();
 
     private readonly int maxObservations = 10; 
+
+    public IReadOnlyList<Sound> Sounds => sounds;
 
     public override ISensor[] CreateSensors()
     {
@@ -56,5 +59,8 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
     public void OnHearSound(Sound sound)
     {
         sounds.Add(sound);
+        sounds = sounds
+                .OrderByDescending(s => s.Radius / Vector3.Distance(transform.position, s.Origin))
+                .ToList();
     }
 }

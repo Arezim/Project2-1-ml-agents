@@ -1,7 +1,10 @@
+using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Policies;
-using UnityEngine;
+using System.Linq;
+using Unity.Sentis.Layers;
+using Unity.MLAgents.Sensors;
 
 public enum Team
 {
@@ -25,8 +28,6 @@ public class AgentSoccer : Agent
         Goalie,
         Generic
     }
-
-    public bool movementEnabled = true;
 
     [HideInInspector]
     public Team team;
@@ -99,59 +100,86 @@ public class AgentSoccer : Agent
 
     public void MoveAgent(ActionSegment<int> act)
     {
-        if (this.movementEnabled)
+        var dirToGo = Vector3.zero;
+        var rotateDir = Vector3.zero;
+
+        m_KickPower = 0f;
+
+        var forwardAxis = act[0];
+        var rightAxis = act[1];
+        var rotateAxis = act[2];
+
+        switch (forwardAxis)
         {
-            Vector3 dirToGo = Vector3.zero;
-            Vector3 rotateDir = Vector3.zero;
-
-            m_KickPower = 0f;
-
-            int forwardAxis = act[0];
-            int rightAxis = act[1];
-            int rotateAxis = act[2];
-
-            switch (forwardAxis)
-            {
-                case 1:
-                    dirToGo = transform.forward * m_ForwardSpeed;
-                    m_KickPower = 1f;
-                    break;
-                case 2:
-                    dirToGo = transform.forward * -m_ForwardSpeed;
-                    break;
-            }
-
-            switch (rightAxis)
-            {
-                case 1:
-                    dirToGo = transform.right * m_LateralSpeed;
-                    break;
-                case 2:
-                    dirToGo = transform.right * -m_LateralSpeed;
-                    break;
-            }
-
-            switch (rotateAxis)
-            {
-                case 1:
-                    rotateDir = transform.up * -1f;
-                    break;
-                case 2:
-                    rotateDir = transform.up * 1f;
-                    break;
-            }
-
-            transform.Rotate(rotateDir, Time.deltaTime * 100f);
-            agentRb.AddForce(dirToGo * m_SoccerSettings.agentRunSpeed,
-                ForceMode.VelocityChange);
-
-            SoundManager.PlaySound(new Sound(transform.localPosition, 15));
+            case 1:
+                dirToGo = transform.forward * m_ForwardSpeed;
+                m_KickPower = 1f;
+                break;
+            case 2:
+                dirToGo = transform.forward * -m_ForwardSpeed;
+                break;
         }
+
+        switch (rightAxis)
+        {
+            case 1:
+                dirToGo = transform.right * m_LateralSpeed;
+                break;
+            case 2:
+                dirToGo = transform.right * -m_LateralSpeed;
+                break;
+        }
+
+        switch (rotateAxis)
+        {
+            case 1:
+                rotateDir = transform.up * -1f;
+                break;
+            case 2:
+                rotateDir = transform.up * 1f;
+                break;
+        }
+
+        transform.Rotate(rotateDir, Time.deltaTime * 100f);
+        agentRb.AddForce(dirToGo * m_SoccerSettings.agentRunSpeed,
+            ForceMode.VelocityChange);
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
 
     {
+        var soundSensor = transform.Find("Sound Collider").GetComponent<SoundSensorComponent>();
+        var sounds = soundSensor.Sounds;
+
+        if (sounds.Count > 0) 
+        {
+            Sound closest = sounds
+                            .OrderBy(s => Vector3.Distance(transform.position, s.Origin))
+                            .First();
+
+            Debug.Log($"Agent {name} detected sound: Origin = {closest.Origin}, Radius = {closest.Radius}");
+
+            Vector3 direction = (closest.Origin - transform.position).normalized;
+            float distanceToSound = Vector3.Distance(transform.position, closest.Origin);
+
+            Vector3 nextPosition = transform.position + agentRb.velocity * Time.fixedDeltaTime;
+            float nextDistanceToSound = Vector3.Distance(nextPosition, closest.Origin);
+
+            if (nextDistanceToSound < distanceToSound)
+            {
+                float reward = 0.1f * (distanceToSound - nextDistanceToSound);
+                AddReward(reward);
+                Debug.Log($"Agent rewarded for moving closer to sound: {reward}");
+            }
+            else
+            {
+                float penalty = -0.05f * (nextDistanceToSound - distanceToSound);
+                AddReward(penalty);
+                Debug.Log($"Agent penalized for moving away from sound: {penalty}");
+            }
+        }
+
+        soundSensor.Reset();
 
         if (position == Position.Goalie)
         {
@@ -163,12 +191,13 @@ public class AgentSoccer : Agent
             // Existential penalty for Strikers
             AddReward(-m_Existential);
         }
+
         MoveAgent(actionBuffers.DiscreteActions);
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        ActionSegment<int> discreteActionsOut = actionsOut.DiscreteActions;
+        var discreteActionsOut = actionsOut.DiscreteActions;
         //forward
         if (Input.GetKey(KeyCode.W))
         {
@@ -202,7 +231,7 @@ public class AgentSoccer : Agent
     /// </summary>
     void OnCollisionEnter(Collision c)
     {
-        float force = k_Power * m_KickPower;
+        var force = k_Power * m_KickPower;
         if (position == Position.Goalie)
         {
             force = k_Power;
@@ -210,7 +239,7 @@ public class AgentSoccer : Agent
         if (c.gameObject.CompareTag("ball"))
         {
             AddReward(.2f * m_BallTouch);
-            Vector3 dir = c.contacts[0].point - transform.position;
+            var dir = c.contacts[0].point - transform.position;
             dir = dir.normalized;
             c.gameObject.GetComponent<Rigidbody>().AddForce(dir * force);
         }
