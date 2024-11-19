@@ -148,8 +148,6 @@ public class AgentSoccer : Agent
         }
 
         transform.Rotate(rotateDir, Time.deltaTime * 100f);
-        agentRb.AddForce(dirToGo * m_SoccerSettings.agentRunSpeed,
-            ForceMode.VelocityChange);
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
@@ -164,7 +162,6 @@ public class AgentSoccer : Agent
         if (sounds.Count == 0)
         {
             AddReward(0.1f); // Reward for moving towards the ball
-            MoveTowardsBall(directionToBall);
         }
 
         if (sounds.Count > 0)
@@ -184,7 +181,6 @@ public class AgentSoccer : Agent
             Vector3 directionToSound = (closest.Origin - transform.position).normalized;
             float distanceToSound = Vector3.Distance(transform.position, closest.Origin);
 
-            MoveTowardsSound(directionToSound);
             RewardForSoundProximity(distanceToSound);
 
             // Attenuation based on distance: Inverse Square Law (1 / distance^2)
@@ -301,15 +297,6 @@ public class AgentSoccer : Agent
     public override void OnEpisodeBegin()
     {
         m_BallTouch = m_ResetParams.GetWithDefault("ball_touch", 0);
-    }
-    private void MoveTowardsBall(Vector3 directionToBall)
-    {
-        agentRb.AddForce(directionToBall * m_SoccerSettings.agentRunSpeed, ForceMode.VelocityChange);
-    }
-
-    private void MoveTowardsSound(Vector3 directionToSound)
-    {
-        agentRb.AddForce(directionToSound * m_SoccerSettings.agentRunSpeed, ForceMode.VelocityChange);
     }
 
     private void RewardForSoundProximity(float distanceToSound)
