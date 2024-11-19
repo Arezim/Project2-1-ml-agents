@@ -156,7 +156,7 @@ public class AgentSoccer : Agent
     {
         var soundSensor = transform.Find("Sound Collider").GetComponent<SoundSensorComponent>();
         var sounds = soundSensor.Sounds;
-        SoccerEnvController envController = FindObjectOfType<SoccerEnvController>(); 
+        SoccerEnvController envController = GetComponentInParent<SoccerEnvController>(); 
         GameObject ball = envController.ball; 
 
         Vector3 directionToBall = (ball.transform.position - transform.position).normalized;
