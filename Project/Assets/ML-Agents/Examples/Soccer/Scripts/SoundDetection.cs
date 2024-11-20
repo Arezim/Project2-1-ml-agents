@@ -10,7 +10,7 @@ public class SoundDetection : MonoBehaviour
     void OnTriggerEnter(Collider other)
         {
             // Add the object to the list if it's not already in it
-                    if (!objectsInSphere.Contains(other.gameObject) && (other.CompareTag("blueAgent") || other.CompareTag("purpleAgent")))
+                    if (!objectsInSphere.Contains(other.gameObject) && (other.CompareTag("blueAgent") || other.CompareTag("purpleAgent") || other.CompareTag("ball")))
                     {
                         objectsInSphere.Add(other.gameObject);
                         Debug.Log(other.name + " entered the detection sphere.");
@@ -20,7 +20,7 @@ public class SoundDetection : MonoBehaviour
     void OnTriggerExit(Collider other)
         {
             // Remove the object from the list
-                    if (!objectsInSphere.Contains(other.gameObject) && (other.CompareTag("blueAgent") || other.CompareTag("purpleAgent")))
+                    if (!objectsInSphere.Contains(other.gameObject) && (other.CompareTag("blueAgent") || other.CompareTag("purpleAgent") || other.CompareTag("ball")))
                     {
                         objectsInSphere.Remove(other.gameObject);
                         Debug.Log(other.name + " exited the detection sphere.");
@@ -40,9 +40,9 @@ public class SoundDetection : MonoBehaviour
                 // Ensure the object still exists (in case it's destroyed elsewhere)
                 if (obj != null)
                 {
-                    Vector3 position = obj.transform.position;
+                    Vector3 relativePosition = obj.transform.position - transform.position;
                     // Perform your logic with the position data
-                    Debug.Log(obj.name + " is at position " + position);
+                    Debug.Log(obj.name + " is at relative position " + relativePosition);
                 }
             }
         }
