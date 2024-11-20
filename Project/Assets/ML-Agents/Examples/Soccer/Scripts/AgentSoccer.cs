@@ -3,8 +3,6 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Policies;
 using System.Linq;
-using Unity.Sentis.Layers;
-using Unity.MLAgents.Sensors;
 
 public enum Team
 {
@@ -148,87 +146,13 @@ public class AgentSoccer : Agent
         }
 
         transform.Rotate(rotateDir, Time.deltaTime * 100f);
+        agentRb.AddForce(dirToGo * m_SoccerSettings.agentRunSpeed,
+            ForceMode.VelocityChange);
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
-        var soundSensor = transform.Find("Sound Collider").GetComponent<SoundSensorComponent>();
-        var sounds = soundSensor.Sounds;
-        SoccerEnvController envController = GetComponentInParent<SoccerEnvController>(); 
-        GameObject ball = envController.ball; 
-
-        Vector3 directionToBall = (ball.transform.position - transform.position).normalized;
-        float distanceToBall = Vector3.Distance(transform.position, ball.transform.position);
-        if (sounds.Count == 0)
-        {
-            AddReward(0.1f); // Reward for moving towards the ball
-        }
-
-        if (sounds.Count > 0)
-        {
-            // Find the closest sound but sort by prioruty first
-            var sortedSounds = sounds
-               .OrderByDescending(s => s.Priority)  // First, sort by priority
-               .ThenBy(s => Vector3.Distance(transform.position, s.Origin))  // Then, sort by distance
-               .ToList();
-
-            // Now the closest and highest priority sound is at the top of the list
-            Sound closest = sortedSounds.First();
-
-            Debug.Log($"Agent {name} detected sound: Origin = {closest.Origin}, Radius = {closest.Radius}");
-
-        
-            Vector3 directionToSound = (closest.Origin - transform.position).normalized;
-            float distanceToSound = Vector3.Distance(transform.position, closest.Origin);
-
-            RewardForSoundProximity(distanceToSound);
-
-            // Attenuation based on distance: Inverse Square Law (1 / distance^2)
-            float soundIntensity = 1f / (distanceToSound * distanceToSound);
-            if (closest.Priority == 10) // Ball sound has a higher priority
-            {
-                if (distanceToSound < 5f)
-                {
-                    AddReward(0.1f * soundIntensity); // Reward for moving toward the ball sound
-                }
-            }
-
-           
-            Vector3 nextPosition = transform.position + agentRb.velocity * Time.fixedDeltaTime;
-            float nextDistanceToSound = Vector3.Distance(nextPosition, closest.Origin);
-            float nextSoundIntensity = 1f / (nextDistanceToSound * nextDistanceToSound);
-
-            if (nextDistanceToSound < distanceToSound)
-            {
-                // Reward for moving closer to the sound
-                AddReward(10f * (distanceToSound - nextDistanceToSound) * soundIntensity);
-                Debug.Log($"Agent rewarded for moving closer to sound: {0.1f * (distanceToSound - nextDistanceToSound)}");
-            }
-            else
-            {
-                // Penalize for moving away from the sound
-                AddReward(-0.5f * (nextDistanceToSound - distanceToSound) * nextSoundIntensity);
-                Debug.Log($"Agent penalized for moving away from sound: {-0.05f * (nextDistanceToSound - distanceToSound)}");
-            }
-
-            // Determine the direction of the sound (left or right)
-            float angleToSound = Vector3.SignedAngle(transform.forward, directionToSound, Vector3.up);
-            if (Mathf.Abs(angleToSound) > 30f) // Check if it's significantly to the left or right
-            {
-                
-                float directionPenalty = Mathf.Abs(angleToSound) > 90f ? -0.2f : -0.1f;
-                AddReward(directionPenalty);
-                Debug.Log($"Agent penalized for moving away from the sound's direction: {directionPenalty}");
-            }
-        }
-        else
-        {
-            // No sound detected, apply a small penalty for inactivity
-            AddReward(-0.1f);
-        }
-
-        soundSensor.Reset();
-
+        SoundSensorReward();
 
         if (position == Position.Goalie)
         {
@@ -242,6 +166,35 @@ public class AgentSoccer : Agent
         }
 
         MoveAgent(actionBuffers.DiscreteActions);
+    }
+
+    private void SoundSensorReward()
+    {
+        var soundSensor = transform.Find("Sound Collider").GetComponent<SoundSensorComponent>();
+        var sounds = soundSensor.Sounds;
+
+        if (sounds.Count == 0)
+        {
+            AddReward(0.1f);
+            return;
+        }
+
+        var closestSound = sounds
+                        .OrderByDescending(s => s.Priority)
+                        .ThenBy(s => Vector3.Distance(transform.position, s.Origin))
+                        .First();
+        
+        Vector3 directionToSound = (closestSound.Origin - transform.position).normalized;
+        float distanceToSound = Vector3.Distance(transform.position, closestSound.Origin);
+
+        AddReward(0.1f / (distanceToSound * distanceToSound));
+
+        if (System.Math.Abs(Vector3.SignedAngle(transform.forward, directionToSound, Vector3.up))> 30f)
+        {
+            AddReward(-0.05f);
+        }
+
+        soundSensor.Reset();
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
@@ -310,34 +263,16 @@ public class AgentSoccer : Agent
     {
         if (position == Position.Striker)
         {
-            MoveStrikerTowardsGoal();
+            Vector3 directionToOpponentGoal = (goal.position - transform.position).normalized;
+            float alignmentReward = Mathf.Max(0.0f, Vector3.Dot(transform.forward, directionToOpponentGoal));
+            AddReward(0.02f * alignmentReward);
         }
         else if (position == Position.Goalie)
         {
-            MoveGoalieTowardsGoal();
-        }
-    }
-
-    void MoveStrikerTowardsGoal()
-    {
-        Vector3 directionToGoal = (goal.position - transform.position).normalized;
-        float speed = 5.0f; 
-        transform.position += directionToGoal * speed * Time.deltaTime;
-    }
-
-    void MoveGoalieTowardsGoal()
-    {
-        float distanceToBall = Vector3.Distance(transform.position, ball.position);
-
-        
-        float thresholdDistance = 10.0f;
-
-        if (distanceToBall < thresholdDistance)
-        {
-            
-            Vector3 directionToGoal = (goal.position - transform.position).normalized;
-            float speed = 5.0f; 
-            transform.position += directionToGoal * speed * Time.deltaTime;
+            if (Vector3.Distance(transform.position, ball.position) < 10.0f)
+            {
+                AddReward(0.3f);
+            }
         }
     }
 }
