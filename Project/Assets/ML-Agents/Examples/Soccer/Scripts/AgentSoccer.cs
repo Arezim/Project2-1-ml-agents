@@ -152,8 +152,6 @@ public class AgentSoccer : Agent
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
-        SoundSensorReward();
-
         if (position == Position.Goalie)
         {
             // Existential bonus for Goalies.
@@ -166,35 +164,6 @@ public class AgentSoccer : Agent
         }
 
         MoveAgent(actionBuffers.DiscreteActions);
-    }
-
-    private void SoundSensorReward()
-    {
-        var soundSensor = transform.Find("Sound Collider").GetComponent<SoundSensorComponent>();
-        var sounds = soundSensor.Sounds;
-
-        if (sounds.Count == 0)
-        {
-            AddReward(0.1f);
-            return;
-        }
-
-        var closestSound = sounds
-                        .OrderByDescending(s => s.Priority)
-                        .ThenBy(s => Vector3.Distance(transform.position, s.Origin))
-                        .First();
-        
-        Vector3 directionToSound = (closestSound.Origin - transform.position).normalized;
-        float distanceToSound = Vector3.Distance(transform.position, closestSound.Origin);
-
-        AddReward(0.1f / (distanceToSound * distanceToSound));
-
-        if (System.Math.Abs(Vector3.SignedAngle(transform.forward, directionToSound, Vector3.up))> 30f)
-        {
-            AddReward(-0.05f);
-        }
-
-        soundSensor.Reset();
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
@@ -250,29 +219,5 @@ public class AgentSoccer : Agent
     public override void OnEpisodeBegin()
     {
         m_BallTouch = m_ResetParams.GetWithDefault("ball_touch", 0);
-    }
-
-    private void RewardForSoundProximity(float distanceToSound)
-    {
-        float soundIntensity = 1f / (distanceToSound * distanceToSound);  
-        AddReward(0.1f * soundIntensity); 
-    }
-
-//checks the position of the agent and calls the appropriate movement method based on the agent's role
-    void Update()
-    {
-        if (position == Position.Striker)
-        {
-            Vector3 directionToOpponentGoal = (goal.position - transform.position).normalized;
-            float alignmentReward = Mathf.Max(0.0f, Vector3.Dot(transform.forward, directionToOpponentGoal));
-            AddReward(0.02f * alignmentReward);
-        }
-        else if (position == Position.Goalie)
-        {
-            if (Vector3.Distance(transform.position, ball.position) < 10.0f)
-            {
-                AddReward(0.3f);
-            }
-        }
     }
 }

@@ -1,0 +1,57 @@
+{
+    "SoccerTwos": {
+        "elo": 1201.7159807753378,
+        "checkpoints": [
+            {
+                "steps": 499948,
+                "file_path": "results\\alexandra_1\\SoccerTwos\\SoccerTwos-499948.onnx",
+                "reward": 161.51736450195312,
+                "creation_time": 1732114974.3277466,
+                "auxillary_file_paths": [
+                    "results\\alexandra_1\\SoccerTwos\\SoccerTwos-499948.pt"
+                ]
+            },
+            {
+                "steps": 527830,
+                "file_path": "results\\alexandra_1\\SoccerTwos\\SoccerTwos-527830.onnx",
+                "reward": null,
+                "creation_time": 1732115034.1767397,
+                "auxillary_file_paths": [
+                    "results\\alexandra_1\\SoccerTwos\\SoccerTwos-527830.pt"
+                ]
+            },
+            {
+                "steps": 999830,
+                "file_path": "results\\alexandra_1\\SoccerTwos\\SoccerTwos-999830.onnx",
+                "reward": 496.1281677246094,
+                "creation_time": 1732117146.6637936,
+                "auxillary_file_paths": [
+                    "results\\alexandra_1\\SoccerTwos\\SoccerTwos-999830.pt"
+                ]
+            },
+            {
+                "steps": 1288610,
+                "file_path": "results\\alexandra_1\\SoccerTwos\\SoccerTwos-1288610.onnx",
+                "reward": 499.70001220703125,
+                "creation_time": 1732118328.2917278,
+                "auxillary_file_paths": [
+                    "results\\alexandra_1\\SoccerTwos\\SoccerTwos-1288610.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1288610,
+            "file_path": "results\\alexandra_1\\SoccerTwos.onnx",
+            "reward": 499.70001220703125,
+            "creation_time": 1732118328.2917278,
+            "auxillary_file_paths": [
+                "results\\alexandra_1\\SoccerTwos\\SoccerTwos-1288610.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.4.1+cpu"
+    }
+}

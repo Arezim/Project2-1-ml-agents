@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1732119665",
+        "python_version": "3.8.20 (default, Oct  3 2024, 15:19:54) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\alexa\\anaconda3\\envs\\mlagents\\Scripts\\mlagents-learn config/custom/SoccerTwos.yaml --run-id=alexandra_gpu --torch-device=xpu",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.4.1+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1732119676"
+    },
+    "total": 10.6085635,
+    "count": 1,
+    "self": 0.012623000000001383,
+    "children": {
+        "run_training.setup": {
+            "total": 0.09113349999999976,
+            "count": 1,
+            "self": 0.09113349999999976
+        },
+        "TrainerController.start_learning": {
+            "total": 10.504807,
+            "count": 1,
+            "self": 9.609999999860008e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 10.5044576,
+                    "count": 1,
+                    "self": 10.5044576
+                },
+                "TrainerController._save_models": {
+                    "total": 0.000253300000000678,
+                    "count": 1,
+                    "self": 0.000253300000000678
+                }
+            }
+        }
+    }
+}
