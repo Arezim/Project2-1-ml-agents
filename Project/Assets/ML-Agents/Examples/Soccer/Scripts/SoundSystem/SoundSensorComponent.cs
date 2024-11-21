@@ -9,7 +9,9 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 {
     private List<Sound> sounds = new();
 
-    private readonly int maxObservations = 10;
+    private readonly int NUM_SOUND_SOURCES = 4; // 3 other players + 1 ball
+    private readonly int VALUES_PER_SOURCE = 3; // distance, angle, type
+    private readonly int TOTAL_OBSERVATIONS = NUM_SOUND_SOURCES * VALUES_PER_SOURCE; // 12
     private SoccerEnvController envController;
 
     void Start()
@@ -41,7 +43,7 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 
     public ObservationSpec GetObservationSpec()
     {
-        return ObservationSpec.VariableLength(3, maxObservations);
+        return ObservationSpec.Vector(TOTAL_OBSERVATIONS);
     }
 
     public void Reset()
@@ -56,11 +58,41 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 
     public int Write(ObservationWriter writer)
     {
+int index = 0;
         foreach (Sound sound in sounds)
         {
-            writer.Add(sound.Origin);
+            // Calculate relative position
+            Vector3 relativePos = sound.Origin - transform.position;
+            
+            // Calculate distance (normalize by max distance)
+            float maxDistance = 40f; // max distance to hear sound !!!!!! TODO: make sure 40f is correct
+            float normalizedDistance = Mathf.Clamp01(relativePos.magnitude / maxDistance);
+            
+            // Calculate angle between forward direction and sound
+            float angle = Vector3.SignedAngle(transform.forward, relativePos, Vector3.up);
+            // Normalize angle from -180,180 to 0,1
+            float normalizedAngle = (angle + 180f) / 360f;
+            
+            // Write type (0 for ball, 1 for player)
+            float soundType = sound.Type == Sound.SoundType.Soccer ? 0f : 1f;
+
+            writer.Add(normalizedDistance);
+            writer.Add(normalizedAngle);
+            writer.Add(soundType);
+            
+            index += VALUES_PER_SOURCE;
         }
-        return sounds.Count;
+
+        // Fill remaining observations with zeros (for safety)
+        while (index < TOTAL_OBSERVATIONS)
+        {
+            writer.Add(0f);
+            writer.Add(0f);
+            writer.Add(0f);
+            index += VALUES_PER_SOURCE;
+        }
+
+        return TOTAL_OBSERVATIONS;
     }
 
     public void OnHearSound(Sound sound)
