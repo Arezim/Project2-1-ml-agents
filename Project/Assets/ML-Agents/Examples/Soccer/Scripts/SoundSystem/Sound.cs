@@ -4,12 +4,15 @@ public struct Sound
 {
     public Vector3 Origin;
     public float Radius;
-    public int Priority;
+    public SoundType Type;
+    public SoccerEnvController PlayingField;
+    public enum SoundType { Soccer, Player };
 
-    public Sound(Vector3 origin, float radius,int priority = 1)
+    public Sound(Vector3 origin, float radius, SoundType type, SoccerEnvController playingField = null)
     {
         Origin = origin;
         Radius = radius;
-        Priority = priority;
+        Type = type;
+        PlayingField = playingField;
     }
 }

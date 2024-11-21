@@ -18,7 +18,7 @@ public class SoccerBallController : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        SoundManager.PlaySound(new Sound(transform.position, 15f));
+        //SoundManager.PlaySound(new Sound(transform.position, 15f));
 
         if (col.gameObject.CompareTag(purpleGoalTag)) //ball touched purple goal
         {
@@ -32,9 +32,9 @@ public class SoccerBallController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (ball.velocity.magnitude > 0.1f) 
+        if (ball.velocity.magnitude > 0.1f)
         {
-            SoundManager.PlaySound(new Sound(transform.position,15f, 10)); // Add higher priority
+            SoundManager.PlaySound(new Sound(transform.position, 40f, Sound.SoundType.Soccer)); // Add higher priority
         }
     }
 }

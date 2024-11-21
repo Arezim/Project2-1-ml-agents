@@ -1,8 +1,8 @@
-using UnityEngine;
+using System.Linq;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Policies;
-using System.Linq;
+using UnityEngine;
 
 public enum Team
 {
@@ -72,14 +72,14 @@ public class AgentSoccer : Agent
             team = Team.Blue;
             initialPos = new Vector3(transform.position.x - 5f, .5f, transform.position.z);
             rotSign = 1f;
-            goal = purpleGoal; 
+            goal = purpleGoal;
         }
         else
         {
             team = Team.Purple;
             initialPos = new Vector3(transform.position.x + 5f, .5f, transform.position.z);
             rotSign = -1f;
-            goal = blueGoal; 
+            goal = blueGoal;
         }
         if (position == Position.Goalie)
         {
@@ -105,14 +105,14 @@ public class AgentSoccer : Agent
 
     public void MoveAgent(ActionSegment<int> act)
     {
-        var dirToGo = Vector3.zero;
-        var rotateDir = Vector3.zero;
+        Vector3 dirToGo = Vector3.zero;
+        Vector3 rotateDir = Vector3.zero;
 
         m_KickPower = 0f;
 
-        var forwardAxis = act[0];
-        var rightAxis = act[1];
-        var rotateAxis = act[2];
+        int forwardAxis = act[0];
+        int rightAxis = act[1];
+        int rotateAxis = act[2];
 
         switch (forwardAxis)
         {
@@ -164,12 +164,12 @@ public class AgentSoccer : Agent
         }
 
         MoveAgent(actionBuffers.DiscreteActions);
-        SoundManager.PlaySound(new Sound(transform.position, 10f));
+        SoundManager.PlaySound(new Sound(transform.position, 40f, Sound.SoundType.Player));
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        var discreteActionsOut = actionsOut.DiscreteActions;
+        ActionSegment<int> discreteActionsOut = actionsOut.DiscreteActions;
         //forward
         if (Input.GetKey(KeyCode.W))
         {
@@ -203,7 +203,7 @@ public class AgentSoccer : Agent
     /// </summary>
     void OnCollisionEnter(Collision c)
     {
-        var force = k_Power * m_KickPower;
+        float force = k_Power * m_KickPower;
         if (position == Position.Goalie)
         {
             force = k_Power;
@@ -211,7 +211,7 @@ public class AgentSoccer : Agent
         if (c.gameObject.CompareTag("ball"))
         {
             AddReward(.2f * m_BallTouch);
-            var dir = c.contacts[0].point - transform.position;
+            Vector3 dir = c.contacts[0].point - transform.position;
             dir = dir.normalized;
             c.gameObject.GetComponent<Rigidbody>().AddForce(dir * force);
         }
