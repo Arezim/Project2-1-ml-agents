@@ -31,7 +31,7 @@ namespace ML_Agents.Examples.Soccer.Scripts
             set
             {
                 source = value;
-                calculate(); // Recalculate when source changes
+                // calculate(); // Recalculate when source changes
             }
         }
 
@@ -41,7 +41,7 @@ namespace ML_Agents.Examples.Soccer.Scripts
             set
             {
                 target = value;
-                calculate(); // Recalculate when target changes
+                // calculate(); // Recalculate when target changes
             }
         }
 
@@ -51,7 +51,7 @@ namespace ML_Agents.Examples.Soccer.Scripts
             set
             {
                 sourcePosition = value;
-                calculate(); // Recalculate when source position changes
+                // calculate(); // Recalculate when source position changes
             }
         }
 
@@ -61,8 +61,13 @@ namespace ML_Agents.Examples.Soccer.Scripts
             set
             {
                 targetPosition = value;
-                calculate(); // Recalculate when target position changes
+                // calculate(); // Recalculate when target position changes
             }
+        }
+
+        public float getDistance()
+        {
+            return this.distance;
         }
 
         public Edge getReversed()
