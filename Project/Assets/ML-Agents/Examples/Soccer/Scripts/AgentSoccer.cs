@@ -164,6 +164,7 @@ public class AgentSoccer : Agent
         }
 
         MoveAgent(actionBuffers.DiscreteActions);
+        SoundManager.PlaySound(new Sound(transform.position, 10f));
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)

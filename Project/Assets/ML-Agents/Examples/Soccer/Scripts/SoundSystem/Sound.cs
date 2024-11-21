@@ -11,6 +11,5 @@ public struct Sound
         Origin = origin;
         Radius = radius;
         Priority = priority;
-
     }
 }
