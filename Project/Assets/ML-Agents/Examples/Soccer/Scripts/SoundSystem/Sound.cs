@@ -8,7 +8,7 @@ public struct Sound
     public SoccerEnvController PlayingField;
     public enum SoundType { Soccer, Player };
 
-    public Sound(Vector3 origin, float radius, SoundType type, SoccerEnvController playingField = null)
+    public Sound(Vector3 origin, float radius, SoundType type, SoccerEnvController playingField)
     {
         Origin = origin;
         Radius = radius;

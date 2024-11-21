@@ -48,6 +48,7 @@ public class AgentSoccer : Agent
     public float rotSign;
 
     EnvironmentParameters m_ResetParams;
+    SoccerEnvController envController;
 
     public Transform ball; // Reference to the ball
     public Transform goal; // Reference to the team's goal
@@ -56,7 +57,7 @@ public class AgentSoccer : Agent
 
     public override void Initialize()
     {
-        SoccerEnvController envController = GetComponentInParent<SoccerEnvController>();
+        envController = GetComponentInParent<SoccerEnvController>();
         if (envController != null)
         {
             m_Existential = 1f / envController.MaxEnvironmentSteps;
@@ -164,7 +165,7 @@ public class AgentSoccer : Agent
         }
 
         MoveAgent(actionBuffers.DiscreteActions);
-        SoundManager.PlaySound(new Sound(transform.position, 40f, Sound.SoundType.Player));
+        SoundManager.PlaySound(new Sound(transform.position, 40f, Sound.SoundType.Player, envController));
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)

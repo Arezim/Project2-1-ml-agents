@@ -2,13 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.MLAgents.Sensors;
+using Unity.MLAgentsExamples;
 using UnityEngine;
 
 public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 {
-    private List<Sound> sounds = new List<Sound>();
+    private List<Sound> sounds = new();
 
-    private readonly int maxObservations = 10; 
+    private readonly int maxObservations = 10;
+    private SoccerEnvController envController;
+
+    void Start()
+    {
+        envController = gameObject.GetComponentInParent<SoccerEnvController>();
+    }
 
     public IReadOnlyList<Sound> Sounds => sounds;
 
@@ -49,7 +56,7 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 
     public int Write(ObservationWriter writer)
     {
-        foreach (var sound in sounds)
+        foreach (Sound sound in sounds)
         {
             writer.Add(sound.Origin);
         }
@@ -62,5 +69,10 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
         sounds = sounds
                 .OrderByDescending(s => s.Radius / Vector3.Distance(transform.position, s.Origin))
                 .ToList();
+    }
+
+    public SoccerEnvController GetPlayingField()
+    {
+        return envController;
     }
 }
