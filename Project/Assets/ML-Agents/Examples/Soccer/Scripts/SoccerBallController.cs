@@ -23,5 +23,7 @@ public class SoccerBallController : MonoBehaviour
         {
             envController.GoalTouched(Team.Purple);
         }
+
+        SoundManager.PlaySound(new Sound(transform.position, 10f, Sound.SoundType.Soccer, envController));
     }
 }

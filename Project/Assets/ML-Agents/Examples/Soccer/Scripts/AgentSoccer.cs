@@ -48,9 +48,11 @@ public class AgentSoccer : Agent
 
     EnvironmentParameters m_ResetParams;
 
+    SoccerEnvController envController;
+
     public override void Initialize()
     {
-        SoccerEnvController envController = GetComponentInParent<SoccerEnvController>();
+        envController = GetComponentInParent<SoccerEnvController>();
         if (envController != null)
         {
             m_Existential = 1f / envController.MaxEnvironmentSteps;
@@ -157,6 +159,7 @@ public class AgentSoccer : Agent
             AddReward(-m_Existential);
         }
         MoveAgent(actionBuffers.DiscreteActions);
+        SoundManager.PlaySound(new Sound(transform.position, 10f, Sound.SoundType.Player, envController));
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
