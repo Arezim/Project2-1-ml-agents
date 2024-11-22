@@ -59,7 +59,6 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
         foreach (Sound sound in sounds)
         {
             writer.Add(sound.Origin);
-            writer.Add(sound.Type);
         }
         return sounds.Count;
     }
