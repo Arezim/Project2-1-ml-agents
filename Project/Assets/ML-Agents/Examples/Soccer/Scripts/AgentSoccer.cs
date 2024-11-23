@@ -159,7 +159,7 @@ public class AgentSoccer : Agent
             AddReward(-m_Existential);
         }
         MoveAgent(actionBuffers.DiscreteActions);
-        SoundManager.PlaySound(new Sound(transform.position, 10f, Sound.SoundType.Player, envController));
+        SoundManager.PlaySound(new Sound(transform.localPosition, 10f, Sound.SoundType.Player, envController));
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
