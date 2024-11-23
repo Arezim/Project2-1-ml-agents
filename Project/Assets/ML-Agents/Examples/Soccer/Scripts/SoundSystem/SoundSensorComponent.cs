@@ -49,9 +49,9 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
         sounds.Clear();
     }
 
-    public void Update()
+    void ISensor.Update()
     {
-
+        sounds.Clear();
     }
 
     public int Write(ObservationWriter writer)
