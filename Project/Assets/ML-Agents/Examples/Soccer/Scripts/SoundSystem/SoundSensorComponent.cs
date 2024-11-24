@@ -77,7 +77,7 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
     private List<Sound> sounds = new();
 
     //queue to remember the last few sounds
-    private HashSet<Sound> soundMemory = new HashSet<Sound>();
+    private Queue<Sound> soundMemory = new Queue<Sound>();
     //they remember for the next 4 frames
     private readonly int memorySize = 4;
 
@@ -133,25 +133,11 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
     public int Write(ObservationWriter writer)
     {
 
-        int count = 0;
-
-        // Write sounds from the current frame
-        foreach (Sound sound in sounds)
+       foreach (var sound in soundMemory)
         {
-            if (count >= maxObservations) break;
             writer.Add(sound.Origin);
-            count++;
         }
-
-        // Write sounds from memory
-        foreach (Sound sound in soundMemory)
-        {
-            if (count >= maxObservations) break;
-            writer.Add(sound.Origin);
-            count++;
-        }
-
-        return count;
+        return soundMemory.Count;
 
         
     }
@@ -159,10 +145,10 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
     public void OnHearSound(Sound sound)
     {
         sounds.Add(sound);
-         soundMemory.Add(sound);
+         soundMemory.Enqueue(sound);
         if (soundMemory.Count > memorySize)
         {
-            soundMemory.Remove(soundMemory.Last());
+            soundMemory.Dequeue();
         }
     }
 
