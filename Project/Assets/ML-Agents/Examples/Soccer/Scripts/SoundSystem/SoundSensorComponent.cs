@@ -45,7 +45,7 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 
     public ObservationSpec GetObservationSpec()
     {
-        return ObservationSpec.VariableLength(3, maxObservations);
+        return ObservationSpec.Vector(TOTAL_OBSERVATIONS);
     }
 
     public void Reset()
