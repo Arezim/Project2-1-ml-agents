@@ -108,9 +108,6 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
     public void OnHearSound(Sound sound)
     {
         sounds.Add(sound);
-        sounds = sounds
-                .OrderByDescending(s => s.Radius / Vector3.Distance(transform.position, s.Origin))
-                .ToList();
     }
 
     public SoccerEnvController GetPlayingField()
