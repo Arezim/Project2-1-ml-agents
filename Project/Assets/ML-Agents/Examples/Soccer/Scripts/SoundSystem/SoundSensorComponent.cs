@@ -9,13 +9,15 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 {
     private List<Sound> sounds = new();
 
-    private readonly int NUM_SOUND_SOURCES = 4; // 3 other players + 1 ball
-    private readonly int VALUES_PER_SOURCE = 3; // distance, angle, type
-    private readonly int TOTAL_OBSERVATIONS = NUM_SOUND_SOURCES * VALUES_PER_SOURCE; // 12
+    private const int VALUES_PER_SOURCE = 3;
+    private int TOTAL_OBSERVATIONS;
+
+    private readonly int maxObservations = 10;
     private SoccerEnvController envController;
 
     void Start()
     {
+        TOTAL_OBSERVATIONS = maxObservations * VALUES_PER_SOURCE;
         envController = gameObject.GetComponentInParent<SoccerEnvController>();
     }
 
@@ -43,7 +45,7 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 
     public ObservationSpec GetObservationSpec()
     {
-        return ObservationSpec.Vector(TOTAL_OBSERVATIONS);
+        return ObservationSpec.VariableLength(3, maxObservations);
     }
 
     public void Reset()
@@ -58,9 +60,14 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 
     public int Write(ObservationWriter writer)
     {
-int index = 0;
+        var observations = new float[TOTAL_OBSERVATIONS];
+        int index = 0;
+        
         foreach (Sound sound in sounds)
         {
+            if (index >= TOTAL_OBSERVATIONS - VALUES_PER_SOURCE)
+                break;
+
             // Calculate relative position
             Vector3 relativePos = sound.Origin - transform.position;
             
@@ -76,9 +83,9 @@ int index = 0;
             // Write type (0 for ball, 1 for player)
             float soundType = sound.Type == Sound.SoundType.Soccer ? 0f : 1f;
 
-            writer.Add(normalizedDistance);
-            writer.Add(normalizedAngle);
-            writer.Add(soundType);
+            observations[index] = normalizedDistance;
+            observations[index + 1] = normalizedAngle;
+            observations[index + 2] = soundType;
             
             index += VALUES_PER_SOURCE;
         }
@@ -86,11 +93,14 @@ int index = 0;
         // Fill remaining observations with zeros (for safety)
         while (index < TOTAL_OBSERVATIONS)
         {
-            writer.Add(0f);
-            writer.Add(0f);
-            writer.Add(0f);
+            observations[index] = 0f;
+            observations[index + 1] = 0f;
+            observations[index + 2] = 0f;
             index += VALUES_PER_SOURCE;
         }
+
+        // Write all observations at once
+        writer.AddList(observations);
 
         return TOTAL_OBSERVATIONS;
     }
