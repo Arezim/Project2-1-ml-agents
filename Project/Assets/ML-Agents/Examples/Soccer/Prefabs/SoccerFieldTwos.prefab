@@ -2668,7 +2668,7 @@ Transform:
   - {fileID: 5643284048999299831}
   - {fileID: 257899726}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8122248192225965164
 MonoBehaviour:
@@ -4108,7 +4108,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8246287664085465113}
-  - component: {fileID: 474784294516803390}
   - component: {fileID: 1444264117121487655}
   m_Layer: 2
   m_Name: Sound Collider
@@ -4132,27 +4131,6 @@ Transform:
   m_Father: {fileID: 5643284048999299831}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &474784294516803390
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3357343017315510874}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1444264117121487655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4174,7 +4152,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4904933679877160601}
-  - component: {fileID: 564414511000293766}
   - component: {fileID: 2953621019162371227}
   m_Layer: 2
   m_Name: Sound Collider
@@ -4198,27 +4175,6 @@ Transform:
   m_Father: {fileID: 7843730402782877929}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &564414511000293766
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3697163146865742551}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2953621019162371227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4768,7 +4724,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6078051451979741919}
-  - component: {fileID: 4465698495194712910}
   - component: {fileID: 1751379018965872228}
   m_Layer: 2
   m_Name: Sound Collider
@@ -4792,27 +4747,6 @@ Transform:
   m_Father: {fileID: 4277721046484044}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &4465698495194712910
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7033678945669227180}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1751379018965872228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4834,7 +4768,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4610553725287948630}
-  - component: {fileID: 4966783915761483963}
   - component: {fileID: 2259953743760235416}
   m_Layer: 2
   m_Name: Sound Collider
@@ -4858,27 +4791,6 @@ Transform:
   m_Father: {fileID: 4444285537983296}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &4966783915761483963
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7384478824991074198}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2259953743760235416
 MonoBehaviour:
   m_ObjectHideFlags: 0
