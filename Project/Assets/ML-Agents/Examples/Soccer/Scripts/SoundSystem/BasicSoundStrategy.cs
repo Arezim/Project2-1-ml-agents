@@ -36,7 +36,7 @@ namespace Assets.ML_Agents.Examples.Soccer.Scripts.SoundSystem
 
         public ObservationSpec GetObservationSpec()
         {
-            return ObservationSpec.VariableLength(4, maxObservations);
+            return ObservationSpec.VariableLength(3, maxObservations);
         }
     }
 }
