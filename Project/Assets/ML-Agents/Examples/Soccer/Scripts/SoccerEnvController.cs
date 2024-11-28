@@ -1,9 +1,6 @@
 using System.Collections.Generic;
 using Unity.MLAgents;
 using UnityEngine;
-using UnityEngine.UI;
-using System;
-
 
 public class SoccerEnvController : MonoBehaviour
 {
@@ -43,7 +40,6 @@ public class SoccerEnvController : MonoBehaviour
     public List<PlayerInfo> AgentsList = new List<PlayerInfo>();
 
     private SoccerSettings m_SoccerSettings;
-    
 
 
     private SimpleMultiAgentGroup m_BlueAgentGroup;
@@ -51,14 +47,8 @@ public class SoccerEnvController : MonoBehaviour
 
     private int m_ResetTimer;
 
-    private Dictionary<Team, int> teamScores = new Dictionary<Team, int>();
-
-    public Text WinLabel;
-    public Button RestartButton;
-
     void Start()
     {
-		this.clearScores();
 
         m_SoccerSettings = FindObjectOfType<SoccerSettings>();
         // Initialize TeamManager
@@ -66,9 +56,6 @@ public class SoccerEnvController : MonoBehaviour
         m_PurpleAgentGroup = new SimpleMultiAgentGroup();
         ballRb = ball.GetComponent<Rigidbody>();
         m_BallStartingPos = new Vector3(ball.transform.position.x, ball.transform.position.y, ball.transform.position.z);
-        WinLabel.gameObject.SetActive(true);  
-        RestartButton.gameObject.SetActive(true);
-        RestartButton.onClick.AddListener(RestartGame);
         foreach (var item in AgentsList)
         {
             item.StartingPos = item.Agent.transform.position;
@@ -100,8 +87,8 @@ public class SoccerEnvController : MonoBehaviour
 
     public void ResetBall()
     {
-        var randomPosX = UnityEngine.Random.Range(-2.5f, 2.5f);
-        var randomPosZ = UnityEngine.Random.Range(-2.5f, 2.5f);
+        var randomPosX = Random.Range(-2.5f, 2.5f);
+        var randomPosZ = Random.Range(-2.5f, 2.5f);
 
         ball.transform.position = m_BallStartingPos + new Vector3(randomPosX, 0f, randomPosZ);
         ballRb.velocity = Vector3.zero;
@@ -113,52 +100,18 @@ public class SoccerEnvController : MonoBehaviour
     {
         if (scoredTeam == Team.Blue)
         {
-            teamScores[Team.Blue] += 1;
             m_BlueAgentGroup.AddGroupReward(1 - (float)m_ResetTimer / MaxEnvironmentSteps);
             m_PurpleAgentGroup.AddGroupReward(-1);
-            ShowWinner("TEAM BLUE WON");
         }
         else
         {
-            teamScores[Team.Purple] += 1;
             m_PurpleAgentGroup.AddGroupReward(1 - (float)m_ResetTimer / MaxEnvironmentSteps);
             m_BlueAgentGroup.AddGroupReward(-1);
-            ShowWinner("TEAM PURPLE WON");
         }
-
-
-
-
-
-
-        if (this.teamScores[Team.Blue] >=1 || this.teamScores[Team.Purple] >=1)
-        {
-            print("Blue Goals: " + this.teamScores[Team.Blue] + " Purple Goals: " + this.teamScores[Team.Purple]);
-            print("Game finished!");
-            m_BlueAgentGroup.EndGroupEpisode();
-            m_PurpleAgentGroup.EndGroupEpisode();
-            StopScene();
-            return;
-        }
-
-
-
-
-
-
-
-
         m_PurpleAgentGroup.EndGroupEpisode();
         m_BlueAgentGroup.EndGroupEpisode();
         ResetScene();
 
-    }
-
-    public void clearScores()
-    {
-        this.teamScores = new Dictionary<Team, int>();
-		this.teamScores[Team.Blue] = 0;
-		this.teamScores[Team.Purple] = 0;
     }
 
 
@@ -169,74 +122,17 @@ public class SoccerEnvController : MonoBehaviour
         //Reset Agents
         foreach (var item in AgentsList)
         {
-            var randomPosX = UnityEngine.Random.Range(-5f, 5f);
+            var randomPosX = Random.Range(-5f, 5f);
             var newStartPos = item.Agent.initialPos + new Vector3(randomPosX, 0f, 0f);
-            var rot = item.Agent.rotSign * UnityEngine.Random.Range(80.0f, 100.0f);
+            var rot = item.Agent.rotSign * Random.Range(80.0f, 100.0f);
             var newRot = Quaternion.Euler(0, rot, 0);
             item.Agent.transform.SetPositionAndRotation(newStartPos, newRot);
 
             item.Rb.velocity = Vector3.zero;
             item.Rb.angularVelocity = Vector3.zero;
         }
-        WinLabel.gameObject.SetActive(false);  
-        RestartButton.gameObject.SetActive(false); 
 
         //Reset Ball
         ResetBall();
     }
-
-    public void StopScene()
-    {
-        // Reset ball
-        ballRb.velocity = Vector3.zero;
-        ballRb.angularVelocity = Vector3.zero;
-
-        // Stop agents
-        m_PurpleAgentGroup.GroupEpisodeInterrupted();
-        m_BlueAgentGroup.GroupEpisodeInterrupted();
-
-        foreach (var item in AgentsList)
-        {
-            // Stop agent physics
-            var newStartPos = item.Agent.initialPos;
-            var rot = item.Agent.rotSign;
-            var newRot = Quaternion.Euler(0, rot, 0);
-            item.Agent.transform.SetPositionAndRotation(newStartPos, newRot);
-            item.Agent.agentRb.velocity = Vector3.zero;
-            item.Agent.agentRb.angularVelocity = Vector3.zero;
-
-            // Disable agent movement
-            item.Agent.movementEnabled = false;
-            print("movement state:" + item.Agent.movementEnabled);
-        }
-    }
-
-     public void ShowWinner(string winnerText)
-    {
-       try
-       {
-        WinLabel.text = winnerText;
-        WinLabel.gameObject.SetActive(true);
-        RestartButton.gameObject.SetActive(true);
-       }
-       catch (NullReferenceException ex)
-       {
-        Debug.LogError("A NullReferenceException occurred: " + ex.Message);
-        
-       }
-    }
-
-   public void RestartGame()
-{
-    clearScores();
-    ResetScene();
-    foreach (var item in AgentsList)
-        {
-            
-            // Disable agent movement
-            item.Agent.movementEnabled = true;
-            print("movement state:" + item.Agent.movementEnabled);
-        }
-} 
-
 }

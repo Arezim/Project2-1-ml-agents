@@ -26,8 +26,6 @@ public class AgentSoccer : Agent
         Generic
     }
 
-    public bool movementEnabled = true;
-
     [HideInInspector]
     public Team team;
     float m_KickPower;
@@ -101,52 +99,49 @@ public class AgentSoccer : Agent
 
     public void MoveAgent(ActionSegment<int> act)
     {
-        if (this.movementEnabled)
+        var dirToGo = Vector3.zero;
+        var rotateDir = Vector3.zero;
+
+        m_KickPower = 0f;
+
+        var forwardAxis = act[0];
+        var rightAxis = act[1];
+        var rotateAxis = act[2];
+
+        switch (forwardAxis)
         {
-            var dirToGo = Vector3.zero;
-            var rotateDir = Vector3.zero;
-
-            m_KickPower = 0f;
-
-            var forwardAxis = act[0];
-            var rightAxis = act[1];
-            var rotateAxis = act[2];
-
-            switch (forwardAxis)
-            {
-                case 1:
-                    dirToGo = transform.forward * m_ForwardSpeed;
-                    m_KickPower = 1f;
-                    break;
-                case 2:
-                    dirToGo = transform.forward * -m_ForwardSpeed;
-                    break;
-            }
-
-            switch (rightAxis)
-            {
-                case 1:
-                    dirToGo = transform.right * m_LateralSpeed;
-                    break;
-                case 2:
-                    dirToGo = transform.right * -m_LateralSpeed;
-                    break;
-            }
-
-            switch (rotateAxis)
-            {
-                case 1:
-                    rotateDir = transform.up * -1f;
-                    break;
-                case 2:
-                    rotateDir = transform.up * 1f;
-                    break;
-            }
-
-            transform.Rotate(rotateDir, Time.deltaTime * 100f);
-            agentRb.AddForce(dirToGo * m_SoccerSettings.agentRunSpeed,
-                ForceMode.VelocityChange);
+            case 1:
+                dirToGo = transform.forward * m_ForwardSpeed;
+                m_KickPower = 1f;
+                break;
+            case 2:
+                dirToGo = transform.forward * -m_ForwardSpeed;
+                break;
         }
+
+        switch (rightAxis)
+        {
+            case 1:
+                dirToGo = transform.right * m_LateralSpeed;
+                break;
+            case 2:
+                dirToGo = transform.right * -m_LateralSpeed;
+                break;
+        }
+
+        switch (rotateAxis)
+        {
+            case 1:
+                rotateDir = transform.up * -1f;
+                break;
+            case 2:
+                rotateDir = transform.up * 1f;
+                break;
+        }
+
+        transform.Rotate(rotateDir, Time.deltaTime * 100f);
+        agentRb.AddForce(dirToGo * m_SoccerSettings.agentRunSpeed,
+            ForceMode.VelocityChange);
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
