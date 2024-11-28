@@ -1,3 +1,4 @@
+using Assets.ML_Agents.Examples.Soccer.Scripts.SoundSystem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,17 +8,20 @@ using UnityEngine;
 
 public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 {
-    private List<Sound> sounds = new();
+    public ISoundSensorStrategy Strategy;
 
-    private readonly int maxObservations = 10;
     private SoccerEnvController envController;
 
-    void Start()
+    void Awake()
     {
         envController = gameObject.GetComponentInParent<SoccerEnvController>();
+        SetStrategy();
     }
 
-    public IReadOnlyList<Sound> Sounds => sounds;
+    private void SetStrategy()
+    {
+        Strategy ??= new BasicSoundStrategy();
+    }
 
     public override ISensor[] CreateSensors()
     {
@@ -41,32 +45,17 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 
     public ObservationSpec GetObservationSpec()
     {
-        return ObservationSpec.VariableLength(4, maxObservations);
+        SetStrategy();
+        return Strategy.GetObservationSpec();
     }
 
-    public void Reset()
-    {
-        sounds.Clear();
-    }
+    public void Reset() => Strategy.Clear();
 
-    void ISensor.Update()
-    {
-        sounds.Clear();
-    }
+    void ISensor.Update() => Strategy.Clear();
 
-    public int Write(ObservationWriter writer)
-    {
-        foreach (Sound sound in sounds)
-        {
-            writer.Add(sound.Origin);
-        }
-        return sounds.Count;
-    }
+    public int Write(ObservationWriter writer) => Strategy.Write(writer);
 
-    public void OnHearSound(Sound sound)
-    {
-        sounds.Add(sound);
-    }
+    public void OnHearSound(Sound sound) => Strategy.OnHearSound(sound);
 
     public SoccerEnvController GetPlayingField()
     {
