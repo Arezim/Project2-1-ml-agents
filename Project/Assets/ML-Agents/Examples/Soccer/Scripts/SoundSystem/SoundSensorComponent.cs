@@ -53,7 +53,7 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 
     void ISensor.Update() => Strategy.Clear();
 
-    public int Write(ObservationWriter writer) => Strategy.Write(writer);
+    public int Write(ObservationWriter writer) => Strategy.Write(writer, transform);
 
     public void OnHearSound(Sound sound) => Strategy.OnHearSound(sound);
 

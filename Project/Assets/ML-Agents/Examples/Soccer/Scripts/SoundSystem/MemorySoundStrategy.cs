@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Unity.MLAgents.Sensors;
+using UnityEngine;
 
 namespace Assets.ML_Agents.Examples.Soccer.Scripts.SoundSystem
 {
@@ -28,7 +29,7 @@ namespace Assets.ML_Agents.Examples.Soccer.Scripts.SoundSystem
             }
         }
 
-        public int Write(ObservationWriter writer)
+        public int Write(ObservationWriter writer, Transform selfTransform)
         {
             foreach (Sound sound in soundMemory)
             {

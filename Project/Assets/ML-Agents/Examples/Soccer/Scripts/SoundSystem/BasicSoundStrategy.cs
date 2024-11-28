@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Unity.MLAgents.Sensors;
+using UnityEngine;
 
 namespace Assets.ML_Agents.Examples.Soccer.Scripts.SoundSystem
 {
@@ -19,7 +20,7 @@ namespace Assets.ML_Agents.Examples.Soccer.Scripts.SoundSystem
             sounds.Add(sound);
         }
 
-        public int Write(ObservationWriter writer)
+        public int Write(ObservationWriter writer, Transform selfTransform)
         {
             foreach (Sound sound in sounds)
             {
