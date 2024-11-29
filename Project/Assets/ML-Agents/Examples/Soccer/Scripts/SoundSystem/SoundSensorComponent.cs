@@ -8,19 +8,13 @@ using UnityEngine;
 
 public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 {
-    public ISoundSensorStrategy Strategy;
+    public ISoundSensorStrategy Strategy { get; set; }
 
     private SoccerEnvController envController;
 
-    void Awake()
+    void Start()
     {
         envController = gameObject.GetComponentInParent<SoccerEnvController>();
-        SetStrategy();
-    }
-
-    private void SetStrategy()
-    {
-        Strategy ??= new BasicSoundStrategy();
     }
 
     public override ISensor[] CreateSensors()
@@ -45,7 +39,6 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 
     public ObservationSpec GetObservationSpec()
     {
-        SetStrategy();
         return Strategy.GetObservationSpec();
     }
 

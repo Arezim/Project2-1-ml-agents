@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Assets.ML_Agents.Examples.Soccer.Scripts.SoundSystem
 {
-    internal class TomaszSoundSystem : ISoundSensorStrategy
+    internal class TomaszSoundStrategy : ISoundSensorStrategy
     {
         private List<Sound> sounds = new();
         public IReadOnlyList<Sound> Sounds => sounds;
