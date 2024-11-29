@@ -357,27 +357,27 @@ PrefabInstance:
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -392,27 +392,27 @@ PrefabInstance:
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -427,27 +427,27 @@ PrefabInstance:
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -462,27 +462,27 @@ PrefabInstance:
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -520,7 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Symmetric: 1
   SoundStrategyBlue: NoSoundStrategy
-  RayStrategyBlue: {fileID: 985262480}
+  RayStrategyBlue: {fileID: 1116812717}
   ModelBlue: {fileID: 5022602860645237092, guid: 8cd4584c2f2cb4c5fb51675d364e10ec,
     type: 3}
   SoundStrategyPurple: BasicSoundStrategy
@@ -613,27 +613,27 @@ PrefabInstance:
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -648,27 +648,27 @@ PrefabInstance:
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -683,27 +683,27 @@ PrefabInstance:
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -718,27 +718,27 @@ PrefabInstance:
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -951,27 +951,27 @@ PrefabInstance:
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -986,27 +986,27 @@ PrefabInstance:
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1021,27 +1021,27 @@ PrefabInstance:
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1056,27 +1056,27 @@ PrefabInstance:
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   - wall
   - blueAgent
   - purpleAgent
-  m_RaysPerDirection: 5
+  m_RaysPerDirection: 1
   m_MaxRayDegrees: 60
   m_SphereCastRadius: 0.5
   m_RayLength: 20
@@ -1206,27 +1206,27 @@ PrefabInstance:
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1241,27 +1241,27 @@ PrefabInstance:
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1276,27 +1276,27 @@ PrefabInstance:
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1311,27 +1311,27 @@ PrefabInstance:
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1395,27 +1395,27 @@ PrefabInstance:
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1430,27 +1430,27 @@ PrefabInstance:
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1465,27 +1465,27 @@ PrefabInstance:
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1500,27 +1500,27 @@ PrefabInstance:
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1700,27 +1700,27 @@ PrefabInstance:
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1735,27 +1735,27 @@ PrefabInstance:
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1770,27 +1770,27 @@ PrefabInstance:
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1805,27 +1805,27 @@ PrefabInstance:
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1889,27 +1889,27 @@ PrefabInstance:
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1924,27 +1924,27 @@ PrefabInstance:
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1959,27 +1959,27 @@ PrefabInstance:
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -1994,27 +1994,27 @@ PrefabInstance:
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2129,6 +2129,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 135208952479003512, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
@@ -2142,27 +2147,27 @@ PrefabInstance:
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -2177,27 +2182,27 @@ PrefabInstance:
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -2212,27 +2217,27 @@ PrefabInstance:
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
@@ -2247,27 +2252,27 @@ PrefabInstance:
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[1]
-      value: purpleGoal
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.data[2]
       value: blueGoal
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
       propertyPath: m_DetectableTags.Array.data[4]
-      value: purpleAgent
+      value: blueAgent
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_DetectableTags.Array.data[5]
-      value: blueAgent
+      value: purpleAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,0 +1,11 @@
+To train the ml agents you need to
+- Install a bunch of python packages and setup a virtual environment https://unity-technologies.github.io/ml-agents/Installation/
+- Before doing anything, run 
+	- conda activate mlagents
+	- cd C:\Users\tymek\Project2-1-ml-agents
+	- mlagents-learn --help
+- To start the training, run (mlagents-learn config/custom/SoccerTwos.yaml --run-id=ty_training_1)
+	- Where the first parameter is the training config file, and the second is a unique training identifier
+	- For more info on training, see https://unity-technologies.github.io/ml-agents/Getting-Started/#training-a-new-model-with-reinforcement-learning
+- To see the cool graphs
+	tensorboard --logdir results

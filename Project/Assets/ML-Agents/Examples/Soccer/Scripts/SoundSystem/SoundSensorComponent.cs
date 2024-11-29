@@ -48,7 +48,6 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
 
     public int Write(ObservationWriter writer)
     {
-        Debug.Log("write");
         return Strategy.Write(writer, transform);
     }
 
