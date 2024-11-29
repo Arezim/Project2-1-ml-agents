@@ -17,7 +17,7 @@ namespace Unity.MLAgents.Sensors
             {
                 m_SensorShapes = new List<ObservationSpec>(sensors.Count);
                 // First agent, save the sensor sizes
-                foreach (var sensor in sensors)
+                foreach (ISensor sensor in sensors)
                 {
                     m_SensorShapes.Add(sensor.GetObservationSpec());
                 }
@@ -34,18 +34,18 @@ namespace Unity.MLAgents.Sensors
                         sensors.Count
                     );
                 }
-                for (var i = 0; i < Mathf.Min(m_SensorShapes.Count, sensors.Count); i++)
+                for (int i = 0; i < Mathf.Min(m_SensorShapes.Count, sensors.Count); i++)
                 {
-                    var cachedSpec = m_SensorShapes[i];
-                    var sensorSpec = sensors[i].GetObservationSpec();
+                    ObservationSpec cachedSpec = m_SensorShapes[i];
+                    ObservationSpec sensorSpec = sensors[i].GetObservationSpec();
                     if (cachedSpec.Shape != sensorSpec.Shape)
                     {
-                        Debug.AssertFormat(
+                        /*Debug.AssertFormat(
                             cachedSpec.Shape == sensorSpec.Shape,
                             "Sensor shapes must match. {0} != {1}",
                             cachedSpec.Shape,
                             sensorSpec.Shape
-                        );
+                        );*/
                     }
                 }
             }

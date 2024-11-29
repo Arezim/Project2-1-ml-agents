@@ -38,6 +38,7 @@ public class StrategySetup : MonoBehaviour
     private string[] _soundSensorNames;
     private RayPerceptionSensorComponent3D[] _visionStrategies;
 
+#if UNITY_EDITOR
     public void OnValidate()
     {
         RefreshSoundStrategyList();
@@ -58,6 +59,7 @@ public class StrategySetup : MonoBehaviour
             }
         }
     }
+#endif
 
     private void RefreshSoundStrategyList()
     {
@@ -85,7 +87,7 @@ public class StrategySetup : MonoBehaviour
     private void SetRayStrategy(GameObject striker, RayPerceptionSensorComponent3D rayStrategy)
     {
         RayPerceptionSensorComponent3D rayComponent = GetBackwardsRayComponent(striker);
-        CopyComponentValues(rayStrategy, rayComponent);
+        rayComponent.RaysPerDirection = rayStrategy.RaysPerDirection;
     }
 
     private void SetModel(GameObject striker, ModelAsset model)
@@ -107,14 +109,5 @@ public class StrategySetup : MonoBehaviour
     private RayPerceptionSensorComponent3D GetBackwardsRayComponent(GameObject striker)
     {
         return striker.GetComponentsInChildren<RayPerceptionSensorComponent3D>().Skip(1).First();
-    }
-
-    public void CopyComponentValues(UnityEngine.Component srcComponent, UnityEngine.Component dstComponent)
-    {
-        if (srcComponent != null && dstComponent != null && srcComponent != dstComponent)
-        {
-            Undo.RegisterCompleteObjectUndo(dstComponent, "Component");
-            EditorUtility.CopySerializedManagedFieldsOnly(srcComponent, dstComponent);
-        }
     }
 }
