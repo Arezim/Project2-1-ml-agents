@@ -1,5 +1,5 @@
-﻿using System.Collections;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace NaughtyAttributes
@@ -45,8 +45,8 @@ namespace NaughtyAttributes
 
         public static explicit operator DropdownList<object>(DropdownList<T> target)
         {
-            DropdownList<object> result = new DropdownList<object>();
-            foreach (var kvp in target)
+            DropdownList<object> result = new();
+            foreach (KeyValuePair<string, object> kvp in target)
             {
                 result.Add(kvp.Key, kvp.Value);
             }

@@ -38,11 +38,10 @@ public class StrategySetup : MonoBehaviour
     private string[] _soundSensorNames;
     private RayPerceptionSensorComponent3D[] _visionStrategies;
 
-    private void OnValidate()
+    public void OnValidate()
     {
         RefreshSoundStrategyList();
         RefreshRayStrategyList();
-
         foreach (GameObject striker in AllStrikers())
         {
             if (IsBlue(striker))
@@ -85,7 +84,7 @@ public class StrategySetup : MonoBehaviour
 
     private void SetRayStrategy(GameObject striker, RayPerceptionSensorComponent3D rayStrategy)
     {
-        RayPerceptionSensorComponent3D rayComponent = striker.GetComponentInChildren<RayPerceptionSensorComponent3D>();
+        RayPerceptionSensorComponent3D rayComponent = GetBackwardsRayComponent(striker);
         CopyComponentValues(rayStrategy, rayComponent);
     }
 
@@ -103,6 +102,11 @@ public class StrategySetup : MonoBehaviour
     private List<GameObject> AllStrikers()
     {
         return FindObjectsOfType<AgentSoccer>().Select(x => x.gameObject).ToList();
+    }
+
+    private RayPerceptionSensorComponent3D GetBackwardsRayComponent(GameObject striker)
+    {
+        return striker.GetComponentsInChildren<RayPerceptionSensorComponent3D>().Skip(1).First();
     }
 
     public void CopyComponentValues(UnityEngine.Component srcComponent, UnityEngine.Component dstComponent)

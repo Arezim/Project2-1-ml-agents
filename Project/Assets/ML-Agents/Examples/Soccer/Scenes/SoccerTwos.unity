@@ -312,10 +312,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoccerFieldTwos (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 1141134673700168, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4558743310993102, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -348,185 +344,145 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -564,7 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Symmetric: 1
   SoundStrategyBlue: NoSoundStrategy
-  RayStrategyBlue: {fileID: 1116812717}
+  RayStrategyBlue: {fileID: 985262480}
   ModelBlue: {fileID: 5022602860645237092, guid: 8cd4584c2f2cb4c5fb51675d364e10ec,
     type: 3}
   SoundStrategyPurple: BasicSoundStrategy
@@ -644,185 +600,145 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -873,7 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SensorName: PurpleRayPerceptionSensor
+  m_SensorName: RayPerceptionSensorReverse
   m_DetectableTags:
   - ball
   - purpleGoal
@@ -881,7 +797,7 @@ MonoBehaviour:
   - wall
   - purpleAgent
   - blueAgent
-  m_RaysPerDirection: 5
+  m_RaysPerDirection: 0
   m_MaxRayDegrees: 60
   m_SphereCastRadius: 0.5
   m_RayLength: 20
@@ -990,10 +906,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoccerFieldTwos (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 1141134673700168, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4558743310993102, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1026,185 +938,145 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1240,22 +1112,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SensorName: RayPerceptionSensor
-  m_DetectableTags: []
-  m_RaysPerDirection: 3
-  m_MaxRayDegrees: 70
+  m_SensorName: RayPerceptionSensorReverse
+  m_DetectableTags:
+  - ball
+  - blueGoal
+  - purpleGoal
+  - wall
+  - blueAgent
+  - purpleAgent
+  m_RaysPerDirection: 5
+  m_MaxRayDegrees: 60
   m_SphereCastRadius: 0.5
   m_RayLength: 20
   m_RayLayerMask:
     serializedVersion: 2
     m_Bits: 4294967291
-  m_ObservationStacks: 1
+  m_ObservationStacks: 3
   m_AlternatingRayOrder: 1
-  m_UseBatchedRaycasts: 0
+  m_UseBatchedRaycasts: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  m_StartVerticalOffset: 0
-  m_EndVerticalOffset: 0
+  m_StartVerticalOffset: 0.5
+  m_EndVerticalOffset: 0.5
 --- !u!4 &1116812718
 Transform:
   m_ObjectHideFlags: 0
@@ -1282,10 +1160,6 @@ PrefabInstance:
     - target: {fileID: 1141134673700168, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
       propertyPath: m_Name
       value: SoccerFieldTwos (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141134673700168, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4558743310993102, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
       propertyPath: m_RootOrder
@@ -1319,190 +1193,145 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4966783915761483963, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1520,10 +1349,6 @@ PrefabInstance:
     - target: {fileID: 1141134673700168, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
       propertyPath: m_Name
       value: SoccerFieldTwos (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141134673700168, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4558743310993102, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
       propertyPath: m_RootOrder
@@ -1557,185 +1382,145 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1870,10 +1655,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoccerFieldTwos (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 1141134673700168, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4558743310993102, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1906,185 +1687,145 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2102,10 +1843,6 @@ PrefabInstance:
     - target: {fileID: 1141134673700168, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
       propertyPath: m_Name
       value: SoccerFieldTwos (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141134673700168, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4558743310993102, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
       propertyPath: m_RootOrder
@@ -2139,185 +1876,145 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2400,10 +2097,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoccerFieldTwos (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 1141134673700168, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4558743310993102, guid: 54f3340298537426e96a6cc530e2d5d8, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2436,185 +2129,145 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320493772006642, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114516244030127556, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 217286280874173272, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 796105769966339250, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_SensorName
-      value: RayPerceptionSensor
+      value: RayPerceptionSensorReverse
       objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023485123796557062, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_SensorName
-      value: RayPerceptionSensor
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_ObservationStacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_UseBatchedRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562571719799803906, guid: 54f3340298537426e96a6cc530e2d5d8,
-        type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662000663245579659, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionSensorReverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
         type: 3}
       propertyPath: m_RaysPerDirection
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: purpleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[2]
+      value: blueGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[4]
+      value: purpleAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548069788310921501, guid: 54f3340298537426e96a6cc530e2d5d8,
+        type: 3}
+      propertyPath: m_DetectableTags.Array.data[5]
+      value: blueAgent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
