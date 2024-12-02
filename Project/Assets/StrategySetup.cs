@@ -79,9 +79,31 @@ public class StrategySetup : MonoBehaviour
 
     private void SetSoundStrategy(GameObject striker, string strategyName)
     {
-        SoundSensorComponent soundComponent = striker.GetComponentInChildren<SoundSensorComponent>();
         Type strategyType = _soundSensorStrategies.First(x => x.Name == strategyName);
-        soundComponent.Strategy = (ISoundSensorStrategy)Activator.CreateInstance(strategyType);
+        ISoundSensorStrategy strategy = (ISoundSensorStrategy)Activator.CreateInstance(strategyType);
+        SoundSensorComponent soundComponent = striker.GetComponent<SoundSensorComponent>();
+
+        if (IsEmptyStrategy(strategy))
+        {
+            UnityEditor.EditorApplication.delayCall += () =>
+            {
+                DestroyImmediate(soundComponent);
+            };
+        }
+        else
+        {
+            if (soundComponent == null)
+            {
+                soundComponent = striker.AddComponent<SoundSensorComponent>();
+            }
+            soundComponent.Strategy = strategy;
+        }
+    }
+
+    private bool IsEmptyStrategy(ISoundSensorStrategy strategy)
+    {
+        ObservationSpec observationSpec = strategy.GetObservationSpec();
+        return observationSpec.Shape.Length == 1 && observationSpec.Shape[0] == 0;
     }
 
     private void SetRayStrategy(GameObject striker, RayPerceptionSensorComponent3D rayStrategy)

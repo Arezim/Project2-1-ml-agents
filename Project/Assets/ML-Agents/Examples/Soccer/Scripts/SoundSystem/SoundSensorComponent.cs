@@ -42,7 +42,7 @@ public class SoundSensorComponent : SensorComponent, ISoundListener, ISensor
         return Strategy.GetObservationSpec();
     }
 
-    public void Reset() => Strategy.Clear();
+    public void Reset() => Strategy?.Clear();
 
     void ISensor.Update() => Strategy.Clear();
 
