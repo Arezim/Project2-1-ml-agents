@@ -2,59 +2,59 @@
     "SoccerTwos": {
         "checkpoints": [
             {
-                "steps": 4499965,
-                "file_path": "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-4499965.onnx",
+                "steps": 7499959,
+                "file_path": "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-7499959.onnx",
                 "reward": 0.0,
-                "creation_time": 1733245087.640065,
+                "creation_time": 1733256593.1493595,
                 "auxillary_file_paths": [
-                    "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-4499965.pt"
+                    "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-7499959.pt"
                 ]
             },
             {
-                "steps": 4999967,
-                "file_path": "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-4999967.onnx",
+                "steps": 7999979,
+                "file_path": "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-7999979.onnx",
                 "reward": 0.0,
-                "creation_time": 1733246933.0363407,
+                "creation_time": 1733258379.0943637,
                 "auxillary_file_paths": [
-                    "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-4999967.pt"
+                    "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-7999979.pt"
                 ]
             },
             {
-                "steps": 5499856,
-                "file_path": "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-5499856.onnx",
+                "steps": 8499963,
+                "file_path": "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-8499963.onnx",
                 "reward": 0.0,
-                "creation_time": 1733248756.8813136,
+                "creation_time": 1733260147.5647268,
                 "auxillary_file_paths": [
-                    "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-5499856.pt"
+                    "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-8499963.pt"
                 ]
             },
             {
-                "steps": 5999989,
-                "file_path": "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-5999989.onnx",
+                "steps": 8999989,
+                "file_path": "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-8999989.onnx",
                 "reward": 0.0,
-                "creation_time": 1733250561.209051,
+                "creation_time": 1733261963.021131,
                 "auxillary_file_paths": [
-                    "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-5999989.pt"
+                    "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-8999989.pt"
                 ]
             },
             {
-                "steps": 6009035,
-                "file_path": "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-6009035.onnx",
+                "steps": 9334727,
+                "file_path": "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-9334727.onnx",
                 "reward": 0.0,
-                "creation_time": 1733250599.3309543,
+                "creation_time": 1733263200.6032054,
                 "auxillary_file_paths": [
-                    "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-6009035.pt"
+                    "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-9334727.pt"
                 ]
             }
         ],
-        "elo": 1382.5713858311403,
+        "elo": 1465.9326566250331,
         "final_checkpoint": {
-            "steps": 6009035,
+            "steps": 9334727,
             "file_path": "results\\TomaszForwardRays\\SoccerTwos.onnx",
             "reward": 0.0,
-            "creation_time": 1733250599.3309543,
+            "creation_time": 1733263200.6032054,
             "auxillary_file_paths": [
-                "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-6009035.pt"
+                "results\\TomaszForwardRays\\SoccerTwos\\SoccerTwos-9334727.pt"
             ]
         }
     },
