@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1733218319",
+        "python_version": "3.10.12 | packaged by Anaconda, Inc. | (main, Jul  5 2023, 19:01:18) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\arezi\\MiniConda3\\envs\\mlagents\\Scripts\\mlagents-learn config\\poca\\SoccerTwos.yaml --run-id=Tomasz1 --resume",
+        "mlagents_version": "1.0.0",
+        "mlagents_envs_version": "1.0.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.13.1+cu117",
+        "numpy_version": "1.23.5",
+        "end_time_seconds": "1733218382"
+    },
+    "total": 62.86949030000687,
+    "count": 1,
+    "self": 0.01461050000943942,
+    "children": {
+        "run_training.setup": {
+            "total": 0.14682929999980843,
+            "count": 1,
+            "self": 0.14682929999980843
+        },
+        "TrainerController.start_learning": {
+            "total": 62.708050499997626,
+            "count": 1,
+            "self": 0.00022509999689646065,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 62.70777079999971,
+                    "count": 1,
+                    "self": 62.70777079999971
+                },
+                "TrainerController._save_models": {
+                    "total": 5.4600001021753997e-05,
+                    "count": 1,
+                    "self": 5.4600001021753997e-05
+                }
+            }
+        }
+    }
+}
