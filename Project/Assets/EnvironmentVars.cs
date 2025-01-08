@@ -15,12 +15,12 @@ public class EnvironmentVars : MonoBehaviour
         m_statsRecorder = Academy.Instance.StatsRecorder;
         m_nextUpdate = 0;
 
-        Debug.Log("Starting logging into file \"soccerLog\"");
+        /*Debug.Log("Starting logging into file \"soccerLog\"");
         Profiler.logFile = "soccerLog";
         Profiler.enableBinaryLog = true;
         Profiler.enabled = true;
         Profiler.maxUsedMemory = 256 * 1024 * 1024;
-        Profiler.BeginSample("Soccer");
+        Profiler.BeginSample("Soccer");*/
     }
 
 
@@ -39,9 +39,12 @@ public class EnvironmentVars : MonoBehaviour
 
     void onDestroy()
     {
-        Profiler.EndSample();
-        Profiler.enabled = false;
-        Profiler.logFile = "";
-        Debug.Log("Ending logging!");
+        if (Profiler.enabled)
+        {
+            Profiler.EndSample();
+            Profiler.enabled = false;
+            Profiler.logFile = "";
+            Debug.Log("Ending logging!");
+        }
     }
 }
