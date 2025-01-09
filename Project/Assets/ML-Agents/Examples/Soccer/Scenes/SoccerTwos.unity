@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 266874076}
   - component: {fileID: 266874079}
   - component: {fileID: 266874078}
+  - component: {fileID: 266874080}
   m_Layer: 0
   m_Name: ProfilerLogger
   m_TagString: Untagged
@@ -264,6 +265,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bbbe78906c1c314dbf17e4048e5f51d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpdateInterval: 1
+--- !u!114 &266874080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266874075}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4f8549218697e4d9d94168ae6f6d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateInterval: 1
 --- !u!1001 &296100289
 PrefabInstance:
   m_ObjectHideFlags: 0
