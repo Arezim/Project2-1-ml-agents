@@ -1,51 +1,60 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Text;
 using Unity.Profiling;
+using UnityEngine;
 
 public class PerformanceTracker : MonoBehaviour
 {
-    private ProfilerRecorder mainThreadTimeRecorder;
-    private ProfilerRecorder renderThreadTimeRecorder;
-    private ProfilerRecorder memoryRecorder;
+    string statsText;
+    ProfilerRecorder systemMemoryRecorder;
+    ProfilerRecorder gcMemoryRecorder;
+    ProfilerRecorder mainThreadTimeRecorder;
 
-    private float totalMainThreadTime = 0f;
-    private int frameCount = 0;
+    static double GetRecorderFrameAverage(ProfilerRecorder recorder)
+    {
+        var samplesCount = recorder.Capacity;
+        if (samplesCount == 0)
+            return 0;
+
+        double r = 0;
+        unsafe
+        {
+            var samples = stackalloc ProfilerRecorderSample[samplesCount];
+            recorder.CopyTo(samples, samplesCount);
+            for (var i = 0; i < samplesCount; ++i)
+                r += samples[i].Value;
+            r /= samplesCount;
+        }
+
+        return r;
+    }
 
     void OnEnable()
     {
-        // Main Thread (CPU time) and Memory Usage Profiler Recorders
-        mainThreadTimeRecorder = ProfilerRecorder.StartNew(ProfilerCategory.Internal, "Main Thread");
-        renderThreadTimeRecorder = ProfilerRecorder.StartNew(ProfilerCategory.Internal, "Render Thread");
-        memoryRecorder = ProfilerRecorder.StartNew(ProfilerCategory.Memory, "Total Used Memory");
-    }
-
-    void Update()
-    {
-        frameCount++;
-
-        // CPU Time Calculation (Convert nanoseconds to milliseconds)
-        if (mainThreadTimeRecorder.Valid)
-        {
-            float currentMainThreadTimeMs = mainThreadTimeRecorder.LastValue / (1000f * 1000f);
-            totalMainThreadTime += currentMainThreadTimeMs;
-        }
-
-        // GPU Time (Render Thread - less reliable)
-        float currentRenderTimeMs = renderThreadTimeRecorder.LastValue / (1000f * 1000f);
-
-        // RAM Usage (Convert bytes to MB)
-        float currentRamUsageMB = memoryRecorder.LastValue / (1024f * 1024f);
-
-        // Display cumulative performance stats in the Console
-        Debug.Log($"Average CPU Time: {(totalMainThreadTime / frameCount):F2} ms");
-        Debug.Log($"Current Render Thread Time: {currentRenderTimeMs:F2} ms");
-        Debug.Log($"Current RAM Usage: {currentRamUsageMB:F2} MB");
+        systemMemoryRecorder = ProfilerRecorder.StartNew(ProfilerCategory.Memory, "System Used Memory");
+        gcMemoryRecorder = ProfilerRecorder.StartNew(ProfilerCategory.Memory, "GC Reserved Memory");
+        mainThreadTimeRecorder = ProfilerRecorder.StartNew(ProfilerCategory.Internal, "Main Thread", 15);
     }
 
     void OnDisable()
     {
-        // Dispose of the recorders to avoid memory leaks
+        systemMemoryRecorder.Dispose();
+        gcMemoryRecorder.Dispose();
         mainThreadTimeRecorder.Dispose();
-        renderThreadTimeRecorder.Dispose();
-        memoryRecorder.Dispose();
+    }
+
+    void Update()
+    {
+        var sb = new StringBuilder(500);
+        sb.AppendLine($"Frame Time: {GetRecorderFrameAverage(mainThreadTimeRecorder) * (1e-6f):F1} ms");
+        sb.AppendLine($"GC Memory: {gcMemoryRecorder.LastValue / (1024 * 1024)} MB");
+        sb.AppendLine($"System Memory: {systemMemoryRecorder.LastValue / (1024 * 1024)} MB");
+        statsText = sb.ToString();
+        Debug.Log(statsText);
+    }
+
+    void OnGUI()
+    {
+        GUI.TextArea(new Rect(10, 30, 250, 50), statsText);
     }
 }
