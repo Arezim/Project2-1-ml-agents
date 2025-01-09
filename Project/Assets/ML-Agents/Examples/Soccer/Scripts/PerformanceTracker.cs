@@ -1,32 +1,31 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using Unity.MLAgents;
 using Unity.Profiling;
 using UnityEngine;
 
 public class PerformanceTracker : MonoBehaviour
 {
-    string statsText;
+    public double FrameTime_ms => GetRecorderFrameAverage(mainThreadTimeRecorder) * (1e-6f);
+    public long GCMemoryMB => gcMemoryRecorder.LastValue / (1024 * 1024);
+    public long SystemMemoryMB => systemMemoryRecorder.LastValue / (1024 * 1024);
+
     ProfilerRecorder systemMemoryRecorder;
     ProfilerRecorder gcMemoryRecorder;
     ProfilerRecorder mainThreadTimeRecorder;
 
     static double GetRecorderFrameAverage(ProfilerRecorder recorder)
     {
-        var samplesCount = recorder.Capacity;
-        if (samplesCount == 0)
-            return 0;
-
-        double r = 0;
-        unsafe
+        List<ProfilerRecorderSample> samples = new();
+        recorder.CopyTo(samples);
+        //Debug.Log("Count: " + samples.Count);
+        if (recorder.Count == 0)
         {
-            var samples = stackalloc ProfilerRecorderSample[samplesCount];
-            recorder.CopyTo(samples, samplesCount);
-            for (var i = 0; i < samplesCount; ++i)
-                r += samples[i].Value;
-            r /= samplesCount;
+            return 0;
         }
 
-        return r;
+        return samples.ConvertAll(x => x.Value).Average();
     }
 
     void OnEnable()
@@ -41,20 +40,5 @@ public class PerformanceTracker : MonoBehaviour
         systemMemoryRecorder.Dispose();
         gcMemoryRecorder.Dispose();
         mainThreadTimeRecorder.Dispose();
-    }
-
-    void Update()
-    {
-        var sb = new StringBuilder(500);
-        sb.AppendLine($"Frame Time: {GetRecorderFrameAverage(mainThreadTimeRecorder) * (1e-6f):F1} ms");
-        sb.AppendLine($"GC Memory: {gcMemoryRecorder.LastValue / (1024 * 1024)} MB");
-        sb.AppendLine($"System Memory: {systemMemoryRecorder.LastValue / (1024 * 1024)} MB");
-        statsText = sb.ToString();
-        Debug.Log(statsText);
-    }
-
-    void OnGUI()
-    {
-        GUI.TextArea(new Rect(10, 30, 250, 50), statsText);
     }
 }

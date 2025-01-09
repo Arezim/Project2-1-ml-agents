@@ -1,17 +1,20 @@
 using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading;
+using Unity.MLAgents;
 using UnityEngine;
 
-public class CPUMeasurer : MonoBehaviour
+public class CPUTracker : MonoBehaviour
 {
-    public static float CPU_USAGE = 0;
+    public float CPUUsage { get => _cpu_usage; }
 
     private Thread _cpuThread;
     private float _lasCpuUsage;
     private float updateInterval = 1;
     private int processorCount;
+    private float _cpu_usage;
 
     // Start is called before the first frame update
     void Start()
@@ -67,8 +70,10 @@ public class CPUMeasurer : MonoBehaviour
             // since the last time we called this divided by the time we waited
             // Then since the performance was optionally spread equally over all physical CPUs
             // we also divide by the physical CPU count
-            CPU_USAGE = 100f * (float)newCPUTime.TotalSeconds / updateInterval / processorCount;
-            CPU_USAGE = Math.Clamp(CPU_USAGE, 0, 100);
+            _cpu_usage = 100f * (float)newCPUTime.TotalSeconds / updateInterval / processorCount;
+            _cpu_usage = Math.Clamp(_cpu_usage, 0, 100);
+
+            //Academy.Instance.StatsRecorder.Add("Profiler/cpu_usage", CPU_USAGE);
 
             // Wait for UpdateInterval
             Thread.Sleep(Mathf.RoundToInt(updateInterval * 1000));
