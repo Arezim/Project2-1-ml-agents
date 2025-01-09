@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using Unity.MLAgents;
 using UnityEngine;
-using System.Collections;
-using UnityEngine.Profiling;
 
 public class SoccerEnvController : MonoBehaviour
 {
@@ -73,21 +71,6 @@ public class SoccerEnvController : MonoBehaviour
             }
         }
         ResetScene();
-
-        Debug.log("Starting logging into file \"soccerLog\"")
-        Profiler.logFile = "soccerLog";
-        Profiler.enableBinaryLog = true;
-        Profiler.enabled = true;
-        Profiler.maxUsedMemory = 256 * 1024 * 1024;
-        Profiler.BeginSample("Soccer");
-    }
-
-    void onDestroy()
-    {
-        Profiler.EndSample();
-        Profiler.enabled = false;
-        Profiler.logFile = "";
-        Debug.log("Ending logging!")
     }
 
     void FixedUpdate()
