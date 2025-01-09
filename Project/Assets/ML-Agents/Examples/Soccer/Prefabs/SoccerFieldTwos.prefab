@@ -2665,6 +2665,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4558743310993102}
   - component: {fileID: 8122248192225965164}
+  - component: {fileID: 7540654318326239109}
   m_Layer: 0
   m_Name: SoccerFieldTwos
   m_TagString: Untagged
@@ -2726,6 +2727,18 @@ MonoBehaviour:
     StartingPos: {x: 0, y: 0, z: 0}
     StartingRot: {x: 0, y: 0, z: 0, w: 0}
     Rb: {fileID: 0}
+--- !u!114 &7540654318326239109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141134673700168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27aa6dd064f54a61a4502ad4edfea2a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1366507812774098
 GameObject:
   m_ObjectHideFlags: 0
