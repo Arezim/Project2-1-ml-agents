@@ -13,6 +13,7 @@ namespace Assets.ML_Agents.Examples.Soccer.Scripts.SoundSystem
 
         public void Clear()
         {
+
         }
 
         public ObservationSpec GetObservationSpec()
