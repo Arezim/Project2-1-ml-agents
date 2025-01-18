@@ -8,8 +8,8 @@ namespace Assets.ML_Agents.Examples.Soccer.Scripts.SoundSystem
     {
         //queue to remember the last few sounds
         private Queue<Sound> soundMemory = new();
-        //they remember for the next 4 frames
-        private readonly int memorySize = 4;
+        //they remember for the next 15 frames
+        private readonly int memorySize = 15;
 
         public void Clear()
         {
