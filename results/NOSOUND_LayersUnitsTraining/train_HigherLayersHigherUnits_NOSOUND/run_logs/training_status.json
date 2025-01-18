@@ -1,0 +1,66 @@
+{
+    "SoccerTwos": {
+        "checkpoints": [
+            {
+                "steps": 3499998,
+                "file_path": "results\\train_HigherLayersHigherUnits_NOSOUND\\SoccerTwos\\SoccerTwos-3499998.onnx",
+                "reward": 0.0,
+                "creation_time": 1737214218.4787629,
+                "auxillary_file_paths": [
+                    "results\\train_HigherLayersHigherUnits_NOSOUND\\SoccerTwos\\SoccerTwos-3499998.pt"
+                ]
+            },
+            {
+                "steps": 3999989,
+                "file_path": "results\\train_HigherLayersHigherUnits_NOSOUND\\SoccerTwos\\SoccerTwos-3999989.onnx",
+                "reward": 0.0,
+                "creation_time": 1737217584.391826,
+                "auxillary_file_paths": [
+                    "results\\train_HigherLayersHigherUnits_NOSOUND\\SoccerTwos\\SoccerTwos-3999989.pt"
+                ]
+            },
+            {
+                "steps": 4499967,
+                "file_path": "results\\train_HigherLayersHigherUnits_NOSOUND\\SoccerTwos\\SoccerTwos-4499967.onnx",
+                "reward": 0.0,
+                "creation_time": 1737221161.829046,
+                "auxillary_file_paths": [
+                    "results\\train_HigherLayersHigherUnits_NOSOUND\\SoccerTwos\\SoccerTwos-4499967.pt"
+                ]
+            },
+            {
+                "steps": 4999988,
+                "file_path": "results\\train_HigherLayersHigherUnits_NOSOUND\\SoccerTwos\\SoccerTwos-4999988.onnx",
+                "reward": 0.0,
+                "creation_time": 1737224522.8104188,
+                "auxillary_file_paths": [
+                    "results\\train_HigherLayersHigherUnits_NOSOUND\\SoccerTwos\\SoccerTwos-4999988.pt"
+                ]
+            },
+            {
+                "steps": 5000046,
+                "file_path": "results\\train_HigherLayersHigherUnits_NOSOUND\\SoccerTwos\\SoccerTwos-5000046.onnx",
+                "reward": 0.0,
+                "creation_time": 1737224523.341246,
+                "auxillary_file_paths": [
+                    "results\\train_HigherLayersHigherUnits_NOSOUND\\SoccerTwos\\SoccerTwos-5000046.pt"
+                ]
+            }
+        ],
+        "elo": 1456.1253433109027,
+        "final_checkpoint": {
+            "steps": 5000046,
+            "file_path": "results\\train_HigherLayersHigherUnits_NOSOUND\\SoccerTwos.onnx",
+            "reward": 0.0,
+            "creation_time": 1737224523.341246,
+            "auxillary_file_paths": [
+                "results\\train_HigherLayersHigherUnits_NOSOUND\\SoccerTwos\\SoccerTwos-5000046.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}
