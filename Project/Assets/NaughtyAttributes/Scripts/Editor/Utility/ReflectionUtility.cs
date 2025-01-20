@@ -12,7 +12,7 @@ namespace NaughtyAttributes.Editor
         {
             if (target == null)
             {
-                Debug.LogError("The target object is null. Check for missing scripts.");
+                //Debug.LogError("The target object is null. Check for missing scripts.");
                 yield break;
             }
 
@@ -24,7 +24,7 @@ namespace NaughtyAttributes.Editor
                     .GetFields(BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.DeclaredOnly)
                     .Where(predicate);
 
-                foreach (var fieldInfo in fieldInfos)
+                foreach (FieldInfo fieldInfo in fieldInfos)
                 {
                     yield return fieldInfo;
                 }
@@ -47,7 +47,7 @@ namespace NaughtyAttributes.Editor
                     .GetProperties(BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.DeclaredOnly)
                     .Where(predicate);
 
-                foreach (var propertyInfo in propertyInfos)
+                foreach (PropertyInfo propertyInfo in propertyInfos)
                 {
                     yield return propertyInfo;
                 }
@@ -70,7 +70,7 @@ namespace NaughtyAttributes.Editor
                     .GetMethods(BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.DeclaredOnly)
                     .Where(predicate);
 
-                foreach (var methodInfo in methodInfos)
+                foreach (MethodInfo methodInfo in methodInfos)
                 {
                     yield return methodInfo;
                 }
@@ -112,7 +112,7 @@ namespace NaughtyAttributes.Editor
         /// <returns></returns>
         private static List<Type> GetSelfAndBaseTypes(object target)
         {
-            List<Type> types = new List<Type>()
+            List<Type> types = new()
             {
                 target.GetType()
             };

@@ -1,0 +1,66 @@
+{
+    "SoccerTwos": {
+        "checkpoints": [
+            {
+                "steps": 3499946,
+                "file_path": "results\\SmallerBufferBatchSizeTimeHorizonNoSound\\SoccerTwos\\SoccerTwos-3499946.onnx",
+                "reward": 0.0,
+                "creation_time": 1736722755.3354628,
+                "auxillary_file_paths": [
+                    "results\\SmallerBufferBatchSizeTimeHorizonNoSound\\SoccerTwos\\SoccerTwos-3499946.pt"
+                ]
+            },
+            {
+                "steps": 3999968,
+                "file_path": "results\\SmallerBufferBatchSizeTimeHorizonNoSound\\SoccerTwos\\SoccerTwos-3999968.onnx",
+                "reward": 0.0,
+                "creation_time": 1736724003.3568037,
+                "auxillary_file_paths": [
+                    "results\\SmallerBufferBatchSizeTimeHorizonNoSound\\SoccerTwos\\SoccerTwos-3999968.pt"
+                ]
+            },
+            {
+                "steps": 4499790,
+                "file_path": "results\\SmallerBufferBatchSizeTimeHorizonNoSound\\SoccerTwos\\SoccerTwos-4499790.onnx",
+                "reward": 0.0,
+                "creation_time": 1736725250.7863693,
+                "auxillary_file_paths": [
+                    "results\\SmallerBufferBatchSizeTimeHorizonNoSound\\SoccerTwos\\SoccerTwos-4499790.pt"
+                ]
+            },
+            {
+                "steps": 4999902,
+                "file_path": "results\\SmallerBufferBatchSizeTimeHorizonNoSound\\SoccerTwos\\SoccerTwos-4999902.onnx",
+                "reward": 0.0,
+                "creation_time": 1736726506.7333004,
+                "auxillary_file_paths": [
+                    "results\\SmallerBufferBatchSizeTimeHorizonNoSound\\SoccerTwos\\SoccerTwos-4999902.pt"
+                ]
+            },
+            {
+                "steps": 5000002,
+                "file_path": "results\\SmallerBufferBatchSizeTimeHorizonNoSound\\SoccerTwos\\SoccerTwos-5000002.onnx",
+                "reward": 0.0,
+                "creation_time": 1736726506.949335,
+                "auxillary_file_paths": [
+                    "results\\SmallerBufferBatchSizeTimeHorizonNoSound\\SoccerTwos\\SoccerTwos-5000002.pt"
+                ]
+            }
+        ],
+        "elo": 1504.2159078923014,
+        "final_checkpoint": {
+            "steps": 5000002,
+            "file_path": "results\\SmallerBufferBatchSizeTimeHorizonNoSound\\SoccerTwos.onnx",
+            "reward": 0.0,
+            "creation_time": 1736726506.949335,
+            "auxillary_file_paths": [
+                "results\\SmallerBufferBatchSizeTimeHorizonNoSound\\SoccerTwos\\SoccerTwos-5000002.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.5.1"
+    }
+}

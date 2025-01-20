@@ -1,3 +1,29 @@
+# Experiments
+Performance changes were evaluated by running the training for 5 million steps. Two types of inputs/sensors have been considered, a sound sensor and forward vision rays. 
+The default parameters are defined in config/custom/SoccerTwos.yaml.
+Four separate training runs were conducted with variations in inputs/sensors and parameters:
+- Two runs using a combination of sound sensors and forward vision rays.
+- Two runs using only forward vision rays.
+
+For each setup, one training run was performed with an increased value for a specific parameter or combination of parameters, and another with a decreased value.
+
+The parameters that were modified are:
+- batch_size, buffer_size and time_horizon
+  
+  -> config/custom/SoccerTwos-BuffBatchTimeHorizon.yaml for smaller batch_size, buffer_size and time_horizon
+  
+  -> config/custom/SoccerTwos-BuffBatchTimeHorizon2.yaml for bigger batch_size, buffer_size and time_horizon
+- lambda
+- learning_rate, beta and learning_rate_schedule
+- trainer_type
+- num_epoch
+- hidden_units and num_layers
+
+The results were interpreted using graphs obtained from the command `tensorboard --logdir results`.
+
+They can be found in the folder results.
+
+The Unity Profiler built-in tool has been used to 
 # Unity ML-Agents Toolkit
 
 [![docs badge](https://img.shields.io/badge/docs-reference-blue.svg)](https://github.com/Unity-Technologies/ml-agents/tree/release_21_docs/docs/)

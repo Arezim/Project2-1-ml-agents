@@ -6,6 +6,10 @@ using System.Threading;
 using Unity.MLAgents;
 using UnityEngine;
 
+/*
+ * Adapted from github https://stackoverflow.com/questions/56684306/how-to-read-system-usage-cpu-ram-etc
+ * user derHugo
+ */
 public class CPUTracker : MonoBehaviour
 {
 
