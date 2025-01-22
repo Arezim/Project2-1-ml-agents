@@ -1,6 +1,17 @@
 # Experiments
-Performance changes were evaluated by running the training for 5 million steps. Two types of inputs/sensors have been considered, a sound sensor and forward vision rays. 
+Performance changes were evaluated by running the training for 5 million steps. 
+Two types of inputs/sensors have been considered, a sound sensor and forward vision rays. 
 The default parameters are defined in config/custom/SoccerTwos.yaml.
+The sensor types can be easily changed using a Strategy Chooser in Unity's Editor.
+
+Experiment 1:
+Changing four types of inputs/sensors for sound:
+- No sound + forward vision rays
+- Basic sound + forward vision rays
+- Memory sound + forward vision rays
+- Radial sound + forward vision rays
+  
+Experiment 2:
 Four separate training runs were conducted with variations in inputs/sensors and parameters:
 - Two runs using a combination of sound sensors and forward vision rays.
 - Two runs using only forward vision rays.
@@ -9,19 +20,30 @@ For each setup, one training run was performed with an increased value for a spe
 
 The parameters that were modified are:
 - batch_size, buffer_size and time_horizon
-  
-  -> config/custom/SoccerTwos-BuffBatchTimeHorizon.yaml for smaller batch_size, buffer_size and time_horizon
-  
-  -> config/custom/SoccerTwos-BuffBatchTimeHorizon2.yaml for bigger batch_size, buffer_size and time_horizon
+  Smaller: 1024, 10240, 500
+  Bigger: 4096, 204800, 2000
 - lambda
+  Smaller: 0.8
+  Bigger: 0.95
 - learning_rate, beta and learning_rate_schedule
+  Smaller: 0.00003
+  Bigger: 0.001
 - trainer_type
+  POCA
+  PPO
+  SAC
 - num_epoch
+  Smaller: 6
+  Bigger: 10
 - hidden_units and num_layers
-
+  Smaller Units and Bigger Layers: 1, 700
+  Smaller Units and Smaller Layers: 1, 32
+  Bigger Units and Smaller Layers: 3, 32
+  Bigger Units and Bigger Layers: 3, 7000
+  
 The results were interpreted using graphs obtained from the command `tensorboard --logdir results`.
 
-They can be found in the folder results.
+They can be found in the folder results. For each of them, the config file is included in the specific folder.
 
 The Unity Profiler built-in tool has been used to 
 # Unity ML-Agents Toolkit
