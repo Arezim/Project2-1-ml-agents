@@ -45,7 +45,7 @@ The results were interpreted using graphs obtained from the command `tensorboard
 
 They can be found in the folder results. For each of them, the config file is included in the specific folder.
 
-The Unity Profiler built-in tool has been used to 
+The Unity Profiler built-in tool has been used to analyze performance, combined with graphs obtained in TensorBoard.
 # Unity ML-Agents Toolkit
 
 [![docs badge](https://img.shields.io/badge/docs-reference-blue.svg)](https://github.com/Unity-Technologies/ml-agents/tree/release_21_docs/docs/)
